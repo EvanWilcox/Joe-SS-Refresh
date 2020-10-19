@@ -5,7 +5,7 @@ import placeHolderImage from "../assets/person.png";
 
 function SideNav() {
   return (
-    <div style={{ width: 200, position: "fixed", hieght: "100%" }}>
+    <div style={{ width: 200, position: "fixed", height: "100%" }}>
       <Sidenav
         appearance="inverse"
         style={{ height: "100%" }}
@@ -44,11 +44,7 @@ function SideNav() {
               <Dropdown.Item eventKey="3-5">Degree Audit</Dropdown.Item>
             </Dropdown>
 
-            <Dropdown
-              eventKey="4"
-              title="Financials"
-              icon={<Icon icon="money" />}
-            >
+            <Dropdown eventKey="4" title="Finance" icon={<Icon icon="money" />}>
               <Dropdown.Item eventKey="4-1">Payments</Dropdown.Item>
               <Dropdown.Item eventKey="4-2">Financial Aid</Dropdown.Item>
             </Dropdown>

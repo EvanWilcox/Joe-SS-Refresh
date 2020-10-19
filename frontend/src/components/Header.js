@@ -9,8 +9,9 @@ function Header() {
       <Link to="/">
         <Banner />
       </Link>
+
       <Navbar>
-        <Navbar.Header></Navbar.Header>
+        {/* <Navbar.Header></Navbar.Header> */}
         <Navbar.Body>
           <Nav>
             <Link to="/">
@@ -21,8 +22,8 @@ function Header() {
               <Nav.Item>Profile</Nav.Item>
             </Link>
 
-            <div style={{ float: "right", paddint: "40px" }}>
-              <InputGroup>
+            <div style={{ float: "right", padding: "10px" }}>
+              <InputGroup style={{ width: "300px" }}>
                 <Input placeholder="Search" />
                 <InputGroup.Button>
                   <Icon icon="search" />

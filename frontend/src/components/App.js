@@ -20,7 +20,7 @@ class App extends Component {
             <Route path="/profile">
               <Profile />
             </Route>
-            <Route path="/settings"></Route>
+            <Route path="/settings">{/* <Settings /> */}</Route>
             <Route path="/">
               <Home />
             </Route>
