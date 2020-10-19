@@ -26,6 +26,17 @@ class App extends Component {
             </Route>
           </Switch>
         </Router>
+
+        <div
+          style={{
+            position: "fixed",
+            left: 0,
+            bottom: 0,
+            width: "100%",
+            height: "10px",
+            background: "#dfc463",
+          }}
+        ></div>
       </div>
     );
   }
