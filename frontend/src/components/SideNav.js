@@ -9,7 +9,7 @@ function SideNav() {
       <Sidenav
         appearance="inverse"
         style={{ height: "100%" }}
-        // defaultOpenKeys={["2", "3", "4"]}
+        defaultOpenKeys={["3", "4"]}
       >
         <Sidenav.Body>
           <Nav>
