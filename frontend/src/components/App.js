@@ -15,15 +15,26 @@ class App extends Component {
           <Header />
           <Sidenav />
 
-          <Switch>
-            <Route path="/profile">
-              <Profile />
-            </Route>
-            <Route path="/settings">{/* <Settings /> */}</Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <div
+            style={{
+              position: "fixed",
+              top: "150px",
+              right: "0",
+              width: "calc(100% - 250px)",
+              height: "calc(100% - 150px)",
+              backgroundColor: "#F0F0F0",
+            }}
+          >
+            <Switch>
+              <Route path="/profile">
+                <Profile />
+              </Route>
+              <Route path="/settings">{/* <Settings /> */}</Route>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </div>
         </Router>
 
         <div
