@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import "rsuite/lib/styles/index.less";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";

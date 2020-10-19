@@ -8,7 +8,7 @@ export class Profile extends Component {
     // let { path, url } = useRouteMatch();
 
     return (
-      <div>
+      <div style={{ textAlign: "center" }}>
         <Breadcrumb>
           <NavLink to="/">Home</NavLink>
           <Breadcrumb.Item active>Profile</Breadcrumb.Item>

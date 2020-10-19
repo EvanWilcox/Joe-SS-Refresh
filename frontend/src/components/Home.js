@@ -8,7 +8,7 @@ class Home extends Component {
     // let { path, url } = useRouteMatch();
 
     return (
-      <div className="Home">
+      <div className="Home" style={{ textAlign: "center" }}>
         <Breadcrumb>
           <Breadcrumb.Item active>Home</Breadcrumb.Item>
         </Breadcrumb>
