@@ -7,7 +7,7 @@ function SideNav() {
   return (
     <div style={{ width: 200, position: "fixed", hieght: "100%" }}>
       <Sidenav
-        apperance="inverse"
+        appearance="inverse"
         style={{ height: "100%" }}
         // defaultOpenKeys={["2", "3", "4"]}
       >

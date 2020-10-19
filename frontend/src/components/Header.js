@@ -23,7 +23,7 @@ function Header() {
 
             <div style={{ float: "right", paddint: "40px" }}>
               <InputGroup>
-                <Input defaultValue="Search" />
+                <Input placeholder="Search" />
                 <InputGroup.Button>
                   <Icon icon="search" />
                 </InputGroup.Button>

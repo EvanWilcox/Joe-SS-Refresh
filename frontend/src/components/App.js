@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import "rsuite/dist/styles/rsuite-default.css";
+import "rsuite/lib/styles/index.less";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Sidenav from "./SideNav";
