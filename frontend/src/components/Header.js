@@ -15,15 +15,17 @@ function Header() {
         <Navbar.Body>
           <Nav>
             <Link to="/">
-              <Nav.Item icon={<Icon icon="home" />}>Home</Nav.Item>
+              <Nav.Item icon={<Icon icon="home" />} style={{ paddingLeft: "10px" }}>
+                Home
+              </Nav.Item>
             </Link>
 
-            <Link to="/profile">
-              <Nav.Item>Profile</Nav.Item>
+            <Link to="/settings">
+              <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
             </Link>
 
             <div style={{ float: "right", padding: "10px" }}>
-              <InputGroup style={{ width: "300px" }}>
+              <InputGroup style={{ width: "1590px" }}>
                 <Input placeholder="Search" />
                 <InputGroup.Button>
                   <Icon icon="search" />
@@ -33,11 +35,10 @@ function Header() {
           </Nav>
 
           <Nav pullRight>
-            <Link to="/settings">
-              <Nav.Item icon={<Icon icon="cog" />}>Settings</Nav.Item>
-            </Link>
             <Link to="/logout">
-              <Nav.Item icon={<Icon icon="sign-out" />}>Log Out</Nav.Item>
+              <Nav.Item icon={<Icon icon="sign-out" />} style={{ paddingRight: "10px" }}>
+                Log Out
+              </Nav.Item>
             </Link>
           </Nav>
         </Navbar.Body>
