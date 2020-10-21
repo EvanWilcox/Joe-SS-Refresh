@@ -1,23 +1,10 @@
-.Home {
-  background-color: white;
-  height: 40px;
+.home {
+  background-color: #f0f0f0;
+  min-height: calc(100vh - 76px);
 }
 
 .panel {
-  margin: 0px 15px 15px 15px;
   background-color: white;
-  padding: 10px;
-  border-radius: 4px;
-}
-
-.left-panel {
-  width: 50%;
-  float: left;
-  background-color: #f0f0f0;
-}
-
-.right-panel {
-  margin-left: 50%;
-  width: 50%;
-  background-color: #f0f0f0;
+  margin: 5px;
+  min-height: 100px;
 }

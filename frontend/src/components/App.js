@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "rsuite/lib/styles/index.less";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import { Container, Content, Footer } from "rsuite";
+
 import Header from "./Header";
 import Sidenav from "./SideNav";
 
@@ -10,44 +13,45 @@ import Profile from "./Profile";
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Router>
+      <Router>
+        <Container>
+          {/* Header */}
           <Header />
-          <Sidenav />
-
-          <div
-            style={{
-              position: "fixed",
-              top: "150px",
-              right: "0",
-              width: "calc(100% - 250px)",
-              height: "calc(100% - 150px)",
-              backgroundColor: "#F0F0F0",
-            }}
-          >
-            <Switch>
-              <Route path="/profile">
-                <Profile />
-              </Route>
-              <Route path="/settings">{/* <Settings /> */}</Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </div>
-        </Router>
-
-        <div
-          style={{
-            position: "fixed",
-            left: 0,
-            bottom: 0,
-            width: "100%",
-            height: "10px",
-            background: "#dfc463",
-          }}
-        ></div>
-      </div>
+          <Container>
+            <Content>
+              <div className="container" style={{ display: "flex" }}>
+                <div style={{ float: "left" }}>
+                  {/* Side Nav Bar */}
+                  <Sidenav />
+                </div>
+                {/* Main Content */}
+                <div style={{ flexGrow: "1" }}>
+                  <Switch>
+                    <Route path="/profile">
+                      <Profile />
+                    </Route>
+                    <Route path="/resources">{/* <Resources /> */}</Route>
+                    <Route path="/settings">{/* <Settings /> */}</Route>
+                    <Route path="/">
+                      <Home />
+                    </Route>
+                  </Switch>
+                </div>
+              </div>
+            </Content>
+          </Container>
+          <Footer>
+            {/* Bottom Green Line */}
+            <div
+              style={{
+                width: "100%",
+                height: "10px",
+                background: "#78BE20",
+              }}
+            />
+          </Footer>
+        </Container>
+      </Router>
     );
   }
 }

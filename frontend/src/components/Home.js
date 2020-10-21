@@ -1,39 +1,66 @@
 import React, { Component } from "react";
 import "./Home.css";
-// import { useRouteMatch } from "react-router-dom";
 
-import { Breadcrumb } from "rsuite";
+import { Breadcrumb, Panel, Grid, Row, Col } from "rsuite";
 
 class Home extends Component {
   render() {
-    // let { path, url } = useRouteMatch();
-
     return (
-      <div className="Home">
-        <Breadcrumb>
-          <Breadcrumb.Item active>Home</Breadcrumb.Item>
-        </Breadcrumb>
+      <div className="home">
+        <div style={{ backgroundColor: "white" }}>
+          <Breadcrumb>
+            <Breadcrumb.Item active>Home</Breadcrumb.Item>
+          </Breadcrumb>
+        </div>
 
-        <div className="left-panel">
-          <div className="panel" style={{ height: "200px" }}>
-            <b>Announcements</b>
-            {/* <Announcements /> */}
-          </div>
-          <div className="panel" style={{ height: "200px" }}>
-            <b>Academic Progress</b>
-            {/* <AcademicProgress /> */}
-          </div>
-          <div className="panel" style={{ height: "200px" }}>
-            <b>Financial Summary</b>
-            {/* <FinancialSummary /> */}
-          </div>
-        </div>
-        <div className="right-panel">
-          <div className="panel" style={{ height: "630px" }}>
-            <b>Course Schedule</b>
-            {/* <CourseSchedule /> */}
-          </div>
-        </div>
+        <Grid fluid>
+          <Row>
+            <Col xs={12}>
+              <Grid fluid>
+                <Row>
+                  <Panel
+                    bordered
+                    className="panel"
+                    header={<h3>Announcements</h3>}
+                    style={{ height: "25vh" }}
+                  >
+                    {/* <Announcements /> */}
+                  </Panel>
+                </Row>
+                <Row>
+                  <Panel
+                    bordered
+                    className="panel"
+                    header={<h3>Academic Progress</h3>}
+                    style={{ height: "25vh" }}
+                  >
+                    {/* <AcademicProgress /> */}
+                  </Panel>
+                </Row>
+                <Row>
+                  <Panel
+                    bordered
+                    className="panel"
+                    header={<h3>Financial Summary</h3>}
+                    style={{ height: "25vh" }}
+                  >
+                    {/* <FinancialSummary /> */}
+                  </Panel>
+                </Row>
+              </Grid>
+            </Col>
+            <Col xs={12}>
+              <Panel
+                bordered
+                className="panel"
+                header={<h3>Course Schedule</h3>}
+                style={{ height: "77vh" }}
+              >
+                {/* <CourseSchedule /> */}
+              </Panel>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     );
   }
