@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import "rsuite/lib/styles/index.less";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "rsuite/lib/styles/index.less";
 import { Container, Content, Footer } from "rsuite";
 
-import Header from "./Header";
-import Sidenav from "./SideNav";
-
-import Home from "./Home";
-import Profile from "./Profile";
+import Sidenav from "./SideNav/SideNav";
+import { Dashboard, Personal, Header } from "./index";
 
 class App extends Component {
   render() {
@@ -20,20 +17,21 @@ class App extends Component {
           <Container>
             <Content>
               <div className="container" style={{ display: "flex" }}>
+                {/* Side Nav Bar */}
                 <div style={{ float: "left" }}>
-                  {/* Side Nav Bar */}
                   <Sidenav />
                 </div>
+
                 {/* Main Content */}
-                <div style={{ flexGrow: "1" }}>
+                <div style={{ flexGrow: "1", padding: "5px", backgroundColor: "#f0f0f0" }}>
                   <Switch>
                     <Route path="/profile">
-                      <Profile />
+                      <Personal />
                     </Route>
                     <Route path="/resources">{/* <Resources /> */}</Route>
                     <Route path="/settings">{/* <Settings /> */}</Route>
                     <Route path="/">
-                      <Home />
+                      <Dashboard />
                     </Route>
                   </Switch>
                 </div>

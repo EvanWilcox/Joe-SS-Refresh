@@ -14,7 +14,7 @@ function Banner() {
           style={{ paddingLeft: "15px", paddingTop: "10px" }}
         />
       </div>
-      <div style={{ width: "100%", height: "10px", background: "#dfc463" }}></div>
+      <div style={{ width: "100%", height: "10px", background: "#dfc463" }} />
     </div>
   );
 }

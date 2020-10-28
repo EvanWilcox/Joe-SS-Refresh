@@ -1,7 +1,7 @@
 import React from "react";
-import { Nav, Sidenav, Icon, Dropdown, Toggle } from "rsuite";
+import { Nav, Sidenav, Icon, Dropdown } from "rsuite";
 import { Link } from "react-router-dom";
-import placeHolderImage from "../assets/person.png";
+import placeHolderImage from "../../assets/person.png";
 
 class SideNav extends React.Component {
   constructor() {
@@ -29,15 +29,15 @@ class SideNav extends React.Component {
     const { expanded } = this.state;
 
     return (
-      <div style={{ width: "14vw" }}>
+      <div style={{}}>
         {/* For Testing Purposes */}
         {/* <Toggle onChange={this.handleToggle} checked={expanded} /> */}
 
         <Sidenav
           appearance="inverse"
           expanded={expanded}
-          activeKey={this.state.activeKey}
-          onSelect={this.handleSelect}
+          //activeKey={this.state.activeKey}
+          //onSelect={this.handleSelect}
           style={{ minHeight: "calc(100vh - 76px)" }}
         >
           {/* defaultOpenKeys={["3", "4"]} */}
@@ -50,7 +50,7 @@ class SideNav extends React.Component {
                   alt="Headshot"
                   width="140"
                   height="140"
-                  style={{ borderRadius: "50%", border: "5px solid #dfc463" }}
+                  style={{ borderRadius: "50%", border: "5px solid #78BE20" }}
                 />
                 <p style={{ fontSize: "26px", paddingTop: "10px" }}>Evan Wilcox</p>
                 <p>Student | Missouri S&T</p>
@@ -66,14 +66,12 @@ class SideNav extends React.Component {
                 </Nav.Item>
               </Link>
 
-              {/* Dashboard Dropdown */}
-              <Dropdown
-                eventKey="2"
-                title="Personal"
-                icon={<Icon icon="user" style={{ color: "#78BE20" }} />}
-              >
-                <Dropdown.Item eventKey="2-1">Info</Dropdown.Item>
-              </Dropdown>
+              {/* Personal Button */}
+              <Link to="/profile">
+                <Nav.Item eventKey="1" icon={<Icon icon="user" style={{ color: "#78BE20" }} />}>
+                  Personal
+                </Nav.Item>
+              </Link>
 
               {/* Academics Dropdown */}
               <Dropdown
@@ -81,11 +79,11 @@ class SideNav extends React.Component {
                 title="Academics"
                 icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
               >
-                <Dropdown.Item eventKey="3-1">Course Schedule</Dropdown.Item>
-                <Dropdown.Item eventKey="3-2">Grades</Dropdown.Item>
-                <Dropdown.Item eventKey="3-3">Add/Drop Class</Dropdown.Item>
-                <Dropdown.Item eventKey="3-4">Transcript</Dropdown.Item>
-                <Dropdown.Item eventKey="3-5">Degree Audit</Dropdown.Item>
+                <Link to="/academics">
+                  <Dropdown.Item eventKey="3-1">Classes</Dropdown.Item>
+                </Link>
+                <Dropdown.Item eventKey="3-2">Schedule Planner</Dropdown.Item>
+                <Dropdown.Item eventKey="3-3">Request Degree Audit</Dropdown.Item>
               </Dropdown>
 
               {/* Finance Dropdown */}
@@ -94,8 +92,9 @@ class SideNav extends React.Component {
                 title="Finance"
                 icon={<Icon icon="money" style={{ color: "#78BE20" }} />}
               >
-                <Dropdown.Item eventKey="4-1">Payments</Dropdown.Item>
+                <Dropdown.Item eventKey="4-1">My Account</Dropdown.Item>
                 <Dropdown.Item eventKey="4-2">Financial Aid</Dropdown.Item>
+                <Dropdown.Item eventKey="4-2">TouchNet</Dropdown.Item>
               </Dropdown>
 
               {/* Benefits & Resources Dropdown */}
