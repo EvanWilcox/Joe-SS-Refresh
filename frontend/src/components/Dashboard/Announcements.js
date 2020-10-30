@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Icon } from "rsuite";
-import "./Announcements.css";
 
 export class Announcements extends Component {
   constructor(props) {
@@ -15,35 +13,35 @@ export class Announcements extends Component {
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "",
+          link: "https://calendar.mst.edu/event/concrete_castles_and_tornados",
         },
         {
           title: "Lorem ipsum dolor",
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "",
+          link: "https://mst.edu",
         },
         {
           title: "Lorem ipsum dolor",
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "",
+          link: "https://mst.edu",
         },
         {
           title: "Lorem ipsum dolor",
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "",
+          link: "https://mst.edu",
         },
         {
           title: "Lorem ipsum dolor",
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "",
+          link: "https://mst.edu",
         },
       ],
     };
@@ -59,11 +57,12 @@ export class Announcements extends Component {
 
         <div style={{ height: "360px", width: "100%", overflow: "auto", marginTop: "10px" }}>
           {this.state.data.map((item) => (
-            <Link to={item.link}>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
               <div style={{ float: "left" }}>
                 <img
                   width="160"
                   height="100"
+                  alt=""
                   style={{
                     borderRadius: "10px",
                     border: "2px solid #BEBEBE",
@@ -78,7 +77,7 @@ export class Announcements extends Component {
                 <br />
                 <br />
               </div>
-            </Link>
+            </a>
           ))}
         </div>
       </div>

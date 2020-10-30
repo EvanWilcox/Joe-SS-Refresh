@@ -18,13 +18,13 @@ class Home extends Component {
               <Grid fluid>
                 <Row>
                   {/* Announcements */}
-                  <Panel shaded bordered className="panel" style={{}}>
+                  <Panel shaded bordered className="panel">
                     <Announcements />
                   </Panel>
                 </Row>
                 <Row>
                   {/* Action Items */}
-                  <Panel shaded bordered className="panel" style={{ height: "35vh" }}>
+                  <Panel shaded bordered className="panel">
                     <ActionItems />
                   </Panel>
                 </Row>
@@ -33,13 +33,13 @@ class Home extends Component {
             <Col xs={12}>
               <Row>
                 {/* Academic Progress */}
-                <Panel shaded bordered className="panel" style={{ height: "30vh" }}>
+                <Panel shaded bordered className="panel">
                   <AcademicProgress />
                 </Panel>
               </Row>
               <Row>
                 {/* Course Schedule */}
-                <Panel shaded bordered className="panel" style={{ height: "55vh" }}>
+                <Panel shaded bordered className="panel">
                   <CourseSchedule />
                 </Panel>
               </Row>

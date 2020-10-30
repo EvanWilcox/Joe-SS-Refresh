@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import "./Header.css";
-// import Banner from "./Banner";
+
 import { Navbar, Nav, Icon, Input, InputGroup } from "rsuite";
 import { Link } from "react-router-dom";
 

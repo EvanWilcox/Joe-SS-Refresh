@@ -8,7 +8,7 @@ export class AcademicProgress extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ height: "247px" }}>
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="mortar-board" size="4x" />
           <h3>Academic Progress</h3>

@@ -38,7 +38,7 @@ class SideNav extends React.Component {
           expanded={expanded}
           //activeKey={this.state.activeKey}
           //onSelect={this.handleSelect}
-          style={{ minHeight: "calc(100vh - 76px)" }}
+          style={{ minHeight: "calc(100vh - 76px)", height: "100%", minWidth: "250px" }}
         >
           {/* defaultOpenKeys={["3", "4"]} */}
           <Sidenav.Body>
@@ -67,14 +67,22 @@ class SideNav extends React.Component {
               </Link>
 
               {/* Personal Button */}
-              <Link to="/profile">
+              <Link to="/personal">
                 <Nav.Item eventKey="1" icon={<Icon icon="user" style={{ color: "#78BE20" }} />}>
                   Personal
                 </Nav.Item>
               </Link>
 
               {/* Academics Dropdown */}
-              <Dropdown
+              <Link to="/academics">
+                <Nav.Item
+                  eventKey="2"
+                  icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
+                >
+                  Academics
+                </Nav.Item>
+              </Link>
+              {/* <Dropdown
                 eventKey="3"
                 title="Academics"
                 icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
@@ -84,10 +92,15 @@ class SideNav extends React.Component {
                 </Link>
                 <Dropdown.Item eventKey="3-2">Schedule Planner</Dropdown.Item>
                 <Dropdown.Item eventKey="3-3">Request Degree Audit</Dropdown.Item>
-              </Dropdown>
+              </Dropdown> */}
 
               {/* Finance Dropdown */}
-              <Dropdown
+              <Link to="/finance">
+                <Nav.Item eventKey="3" icon={<Icon icon="money" style={{ color: "#78BE20" }} />}>
+                  Finance
+                </Nav.Item>
+              </Link>
+              {/* <Dropdown
                 eventKey="4"
                 title="Finance"
                 icon={<Icon icon="money" style={{ color: "#78BE20" }} />}
@@ -95,7 +108,7 @@ class SideNav extends React.Component {
                 <Dropdown.Item eventKey="4-1">My Account</Dropdown.Item>
                 <Dropdown.Item eventKey="4-2">Financial Aid</Dropdown.Item>
                 <Dropdown.Item eventKey="4-2">TouchNet</Dropdown.Item>
-              </Dropdown>
+              </Dropdown> */}
 
               {/* Benefits & Resources Dropdown */}
               <Link to="/resources">
