@@ -26,11 +26,6 @@ export class ActionItems extends Component {
           text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. ",
           complete: false,
         },
-        {
-          title: "Lorem ipsum dolor",
-          text: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. ",
-          complete: false,
-        },
       ],
     };
   }
@@ -40,9 +35,10 @@ export class ActionItems extends Component {
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="clock-o" size="4x" />
           <h3>Action Items</h3>
+          <p class="no-padding">{this.state.data.length} Items</p>
         </div>
 
-        <div style={{ height: "220px", width: "100%", overflow: "auto", marginTop: "10px" }}>
+        <div style={{ height: "212px", width: "100%", overflow: "auto" }}>
           {this.state.data.map((item) => (
             <Panel bordered className="item">
               <div>
@@ -55,6 +51,7 @@ export class ActionItems extends Component {
                     src={item.complete ? GreenCheck : GrayCheck}
                     width="40px"
                     style={{ paddingTop: "9px", paddingRight: "5px" }}
+                    alt="Checkmark"
                   />
                 </div>
               </div>

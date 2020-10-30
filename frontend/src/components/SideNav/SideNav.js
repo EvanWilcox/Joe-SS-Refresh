@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Sidenav, Icon, Dropdown } from "rsuite";
+import { Nav, Sidenav, Icon } from "rsuite";
 import { Link } from "react-router-dom";
 import placeHolderImage from "../../assets/person.png";
 

@@ -2,10 +2,18 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "rsuite/lib/styles/index.less";
-import { Container, Content, Footer } from "rsuite";
+import { Container } from "rsuite";
 
-import Sidenav from "./SideNav/SideNav";
-import { Header, Dashboard, Personal, Academics, Finance, Resources, Settings } from "./index";
+import {
+  Sidenav,
+  Header,
+  Dashboard,
+  Personal,
+  Academics,
+  Finance,
+  Resources,
+  Settings,
+} from "./index";
 
 class App extends Component {
   render() {
@@ -27,10 +35,18 @@ class App extends Component {
                 <Route path="/personal">
                   <Personal />
                 </Route>
-                <Route path="/academics">{/* <Academics /> */}</Route>
-                <Route path="/finance">{/* <Finance /> */}</Route>
-                <Route path="/resources">{/* <Resources /> */}</Route>
-                <Route path="/settings">{/* <Settings /> */}</Route>
+                <Route path="/academics">
+                  <Academics />
+                </Route>
+                <Route path="/finance">
+                  <Finance />
+                </Route>
+                <Route path="/resources">
+                  <Resources />
+                </Route>
+                <Route path="/settings">
+                  <Settings />
+                </Route>
                 <Route path="/">
                   <Dashboard />
                 </Route>

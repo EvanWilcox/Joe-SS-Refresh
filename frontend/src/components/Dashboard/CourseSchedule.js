@@ -58,9 +58,10 @@ export class CourseSchedule extends Component {
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
           <h3>Course Schedule</h3>
+          <p class="no-padding">Fall 2020</p>
         </div>
 
-        <div style={{ height: "400px", width: "100%", overflow: "auto", marginTop: "10px" }}>
+        <div style={{ height: "400px", width: "100%", overflow: "auto" }}>
           {this.state.data.map((item) => (
             <Panel bordered className="class">
               <div style={{ width: "100%" }}>
