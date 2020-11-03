@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon, Panel } from "rsuite";
+import { Icon, Panel, Button } from "rsuite";
 
 export class CourseSchedule extends Component {
   constructor(props) {
@@ -55,13 +55,33 @@ export class CourseSchedule extends Component {
   render() {
     return (
       <div>
-        <div style={{ paddingBottom: "15px" }}>
-          <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
-          <h3>Course Schedule</h3>
-          <p class="no-padding">Fall 2020</p>
+        <div>
+          <div>
+            <div style={{ width: "70%", float: "left" }}>
+              <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
+              <h3>Course Schedule</h3>
+              <p class="no-padding">Fall 2020</p>
+            </div>
+            <div>
+              <Button
+                appearance="primary"
+                style={{ display: "block", width: "20%", marginBottom: "5px", maxWidth: "120px" }}
+              >
+                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+                Add to gCal
+              </Button>
+              <Button
+                appearance="primary"
+                style={{ display: "block", width: "20%", maxWidth: "120px" }}
+              >
+                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+                Add to iCal
+              </Button>
+            </div>
+          </div>
         </div>
 
-        <div style={{ height: "400px", width: "100%", overflow: "auto" }}>
+        <div style={{ height: "438px", width: "100%", overflow: "auto" }}>
           {this.state.data.map((item) => (
             <Panel bordered className="class">
               <div style={{ width: "100%" }}>

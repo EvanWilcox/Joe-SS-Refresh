@@ -58,27 +58,29 @@ export class Announcements extends Component {
 
         <div style={{ height: "360px", width: "100%", overflow: "auto" }}>
           {this.state.data.map((item) => (
-            <a href={item.link} target="_blank" rel="noopener noreferrer">
-              <div style={{ float: "left" }}>
-                <img
-                  width="160"
-                  height="100"
-                  alt=""
-                  style={{
-                    borderRadius: "10px",
-                    border: "2px solid #BEBEBE",
-                    margin: "0px 12px 24px 12px",
-                  }}
-                />
-              </div>
+            <div>
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div style={{ float: "left" }}>
+                  <img
+                    width="160"
+                    height="100"
+                    alt=""
+                    style={{
+                      borderRadius: "10px",
+                      border: "2px solid #BEBEBE",
+                      margin: "0px 12px 24px 12px",
+                    }}
+                  />
+                </div>
 
-              <div>
-                <h4>{item.title}</h4>
-                <p>{item.text}</p>
-                <br />
-                <br />
-              </div>
-            </a>
+                <div>
+                  <h4>{item.title}</h4>
+                  <p>{item.text}</p>
+                  <br />
+                  <br />
+                </div>
+              </a>
+            </div>
           ))}
         </div>
       </div>
