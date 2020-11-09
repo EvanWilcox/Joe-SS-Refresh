@@ -14,7 +14,7 @@ export class AcademicProgress extends Component {
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="mortar-board" size="4x" />
           <h3>Academic Progress</h3>
-          <p class="no-padding">Degree Audit Overview</p>
+          <p className="no-padding">Degree Audit Overview</p>
         </div>
 
         <div style={{ width: "60%", margin: "0 auto" }}>

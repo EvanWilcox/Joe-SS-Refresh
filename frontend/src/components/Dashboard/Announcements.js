@@ -53,12 +53,12 @@ export class Announcements extends Component {
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="bullhorn" size="4x" />
           <h3>Announcements</h3>
-          <p class="no-padding">{this.state.data.length} Items</p>
+          <p className="no-padding">{this.state.data.length} Items</p>
         </div>
 
         <div style={{ height: "360px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item) => (
-            <div>
+          {this.state.data.map((item, key) => (
+            <div key={key}>
               <a href={item.link} target="_blank" rel="noopener noreferrer">
                 <div style={{ float: "left" }}>
                   <img

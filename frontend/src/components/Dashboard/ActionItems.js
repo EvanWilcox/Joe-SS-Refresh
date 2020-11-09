@@ -35,12 +35,12 @@ export class ActionItems extends Component {
         <div style={{ paddingBottom: "15px" }}>
           <Icon style={{ float: "left", paddingRight: "15px" }} icon="clock-o" size="4x" />
           <h3>Action Items</h3>
-          <p class="no-padding">{this.state.data.length} Items</p>
+          <p className="no-padding">{this.state.data.length} Items</p>
         </div>
 
         <div style={{ height: "212px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item) => (
-            <Panel bordered className="item">
+          {this.state.data.map((item, key) => (
+            <Panel key={key} bordered className="item">
               <div>
                 <div style={{ width: "80%", display: "inline-block" }}>
                   <h4>{item.title}</h4>
