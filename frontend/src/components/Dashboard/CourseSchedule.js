@@ -60,7 +60,7 @@ export class CourseSchedule extends Component {
             <div style={{ width: "70%", float: "left" }}>
               <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
               <h3>Course Schedule</h3>
-              <p class="no-padding">Fall 2020</p>
+              <p className="no-padding">Fall 2020</p>
             </div>
             <div>
               <Button
@@ -82,18 +82,18 @@ export class CourseSchedule extends Component {
         </div>
 
         <div style={{ height: "438px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item) => (
-            <Panel bordered className="class">
+          {this.state.data.map((item, key) => (
+            <Panel key={key} bordered className="class">
               <div style={{ width: "100%" }}>
                 <div style={{ width: "50%", float: "left" }}>
                   <h5>{item.class}</h5>
-                  <p class="no-padding">({item.code})</p>
-                  <p class="no-padding">{item.title}</p>
+                  <p className="no-padding">({item.code})</p>
+                  <p className="no-padding">{item.title}</p>
                 </div>
                 <div>
-                  <p class="no-padding">{item.days}</p>
-                  <p class="no-padding">{item.time}</p>
-                  <p class="no-padding">{item.location}</p>
+                  <p className="no-padding">{item.days}</p>
+                  <p className="no-padding">{item.time}</p>
+                  <p className="no-padding">{item.location}</p>
                 </div>
               </div>
             </Panel>

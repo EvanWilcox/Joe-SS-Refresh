@@ -36,8 +36,8 @@ class SideNav extends React.Component {
         <Sidenav
           appearance="inverse"
           expanded={expanded}
-          //activeKey={this.state.activeKey}
-          //onSelect={this.handleSelect}
+          activeKey={this.state.activeKey}
+          onSelect={this.handleSelect}
           style={{ minHeight: "calc(100vh - 76px)", height: "100%", minWidth: "250px" }}
         >
           {/* defaultOpenKeys={["3", "4"]} */}
@@ -68,49 +68,29 @@ class SideNav extends React.Component {
 
               {/* Personal Button */}
               <Link to="/personal">
-                <Nav.Item eventKey="1" icon={<Icon icon="user" style={{ color: "#78BE20" }} />}>
+                <Nav.Item eventKey="2" icon={<Icon icon="user" style={{ color: "#78BE20" }} />}>
                   Personal
                 </Nav.Item>
               </Link>
 
-              {/* Academics Dropdown */}
+              {/* Academics Button */}
               <Link to="/academics">
                 <Nav.Item
-                  eventKey="2"
+                  eventKey="3"
                   icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
                 >
                   Academics
                 </Nav.Item>
               </Link>
-              {/* <Dropdown
-                eventKey="3"
-                title="Academics"
-                icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
-              >
-                <Link to="/academics">
-                  <Dropdown.Item eventKey="3-1">Classes</Dropdown.Item>
-                </Link>
-                <Dropdown.Item eventKey="3-2">Schedule Planner</Dropdown.Item>
-                <Dropdown.Item eventKey="3-3">Request Degree Audit</Dropdown.Item>
-              </Dropdown> */}
 
-              {/* Finance Dropdown */}
+              {/* Finance Button */}
               <Link to="/finance">
-                <Nav.Item eventKey="3" icon={<Icon icon="money" style={{ color: "#78BE20" }} />}>
+                <Nav.Item eventKey="4" icon={<Icon icon="money" style={{ color: "#78BE20" }} />}>
                   Finance
                 </Nav.Item>
               </Link>
-              {/* <Dropdown
-                eventKey="4"
-                title="Finance"
-                icon={<Icon icon="money" style={{ color: "#78BE20" }} />}
-              >
-                <Dropdown.Item eventKey="4-1">My Account</Dropdown.Item>
-                <Dropdown.Item eventKey="4-2">Financial Aid</Dropdown.Item>
-                <Dropdown.Item eventKey="4-2">TouchNet</Dropdown.Item>
-              </Dropdown> */}
 
-              {/* Benefits & Resources Dropdown */}
+              {/* Benefits & Resources Button */}
               <Link to="/resources">
                 <Nav.Item eventKey="5" icon={<Icon icon="link" style={{ color: "#78BE20" }} />}>
                   Benefits & Resources
