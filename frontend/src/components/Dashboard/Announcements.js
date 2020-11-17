@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon } from "rsuite";
+import { Icon, Panel } from "rsuite";
 
 export class Announcements extends Component {
   constructor(props) {
@@ -13,7 +13,7 @@ export class Announcements extends Component {
           text:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           img: "",
-          link: "https://calendar.mst.edu/event/concrete_castles_and_tornados",
+          link: "https://mst.edu",
         },
         {
           title: "Lorem ipsum dolor",
@@ -49,41 +49,43 @@ export class Announcements extends Component {
 
   render() {
     return (
-      <div>
-        <div style={{ paddingBottom: "15px" }}>
-          <Icon style={{ float: "left", paddingRight: "15px" }} icon="bullhorn" size="4x" />
-          <h3>Announcements</h3>
-          <p className="no-padding">{this.state.data.length} Items</p>
-        </div>
+      <Panel shaded bordered className="panel">
+        <div>
+          <div style={{ paddingBottom: "15px" }}>
+            <Icon style={{ float: "left", paddingRight: "15px" }} icon="bullhorn" size="4x" />
+            <h3>Announcements</h3>
+            <p className="no-padding">{this.state.data.length} Items</p>
+          </div>
 
-        <div style={{ height: "360px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item, key) => (
-            <div key={key}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div style={{ float: "left" }}>
-                  <img
-                    width="160"
-                    height="100"
-                    alt=""
-                    style={{
-                      borderRadius: "10px",
-                      border: "2px solid #BEBEBE",
-                      margin: "0px 12px 24px 12px",
-                    }}
-                  />
-                </div>
+          <div style={{ height: "360px", width: "100%", overflow: "auto" }}>
+            {this.state.data.map((item, key) => (
+              <div key={key}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <div style={{ float: "left" }}>
+                    <img
+                      width="160"
+                      height="100"
+                      alt=""
+                      style={{
+                        borderRadius: "10px",
+                        border: "2px solid #BEBEBE",
+                        margin: "0px 12px 24px 12px",
+                      }}
+                    />
+                  </div>
 
-                <div>
-                  <h4>{item.title}</h4>
-                  <p>{item.text}</p>
-                  <br />
-                  <br />
-                </div>
-              </a>
-            </div>
-          ))}
+                  <div>
+                    <h4>{item.title}</h4>
+                    <p>{item.text}</p>
+                    <br />
+                    <br />
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </Panel>
     );
   }
 }

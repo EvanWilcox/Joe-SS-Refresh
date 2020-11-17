@@ -1,0 +1,24 @@
+.panel {
+  background-color: white;
+  padding-left: 10px;
+  margin: 10px;
+  min-height: 100px;
+  min-width: 600px;
+}
+
+.panel:hover {
+  box-shadow: 3px 3px #e87722, -3px -3px #e87722, -3px 3px #e87722, 3px -3px #e87722;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active-link {
+  color: #78be20;
+}
+
+.nav-item {
+  font-size: 18px;
+  font-weight: bold;
+}

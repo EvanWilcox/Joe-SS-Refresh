@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import "rsuite/lib/styles/index.less";
 import { Container } from "rsuite";
@@ -32,24 +32,12 @@ class App extends Component {
             {/* Main Content */}
             <div style={{ flexGrow: "1", padding: "5px", backgroundColor: "#f0f0f0" }}>
               <Switch>
-                <Route path="/personal">
-                  <Personal />
-                </Route>
-                <Route path="/academics">
-                  <Academics />
-                </Route>
-                <Route path="/finance">
-                  <Finance />
-                </Route>
-                <Route path="/resources">
-                  <Resources />
-                </Route>
-                <Route path="/settings">
-                  <Settings />
-                </Route>
-                <Route path="/">
-                  <Dashboard />
-                </Route>
+                <Route path="/personal" component={Personal}></Route>
+                <Route path="/academics" component={Academics} />
+                <Route path="/finance" component={Finance} />
+                <Route path="/resources" component={Resources} />
+                <Route path="/settings" component={Settings} />
+                <Route path="/" component={Dashboard} />
               </Switch>
             </div>
           </div>

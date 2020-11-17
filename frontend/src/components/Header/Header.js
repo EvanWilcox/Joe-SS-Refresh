@@ -23,14 +23,23 @@ function Header() {
             <Nav.Item>
               <Icon icon="bars" size="2x" />
             </Nav.Item>
-            <Nav.Item style={{ fontSize: "30px" }}>Joe'SS Portal</Nav.Item>
+            <Nav.Item>
+              <p style={{ fontSize: "25px" }}>Joe'SS Portal</p>
+            </Nav.Item>
 
             {/* Search Bar */}
             <div style={{ float: "right", padding: "10px" }}>
-              <InputGroup style={{ width: "400" }}>
-                <Input placeholder="Search" />
-                <InputGroup.Button>
-                  <Icon icon="search" />
+              <InputGroup style={{ width: "1530px", border: "2px solid #003B49" }}>
+                <Input
+                  placeholder="Search"
+                  style={{
+                    border: "2px solid #002B36",
+                    backgroundColor: "#002B36",
+                    color: "white",
+                  }}
+                />
+                <InputGroup.Button style={{ backgroundColor: "#002B36" }}>
+                  <Icon icon="search" style={{ color: "#78BE20" }} />
                 </InputGroup.Button>
               </InputGroup>
             </div>

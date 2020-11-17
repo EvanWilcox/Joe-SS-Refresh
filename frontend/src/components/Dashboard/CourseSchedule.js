@@ -54,52 +54,54 @@ export class CourseSchedule extends Component {
 
   render() {
     return (
-      <div>
+      <Panel shaded bordered className="panel">
         <div>
           <div>
-            <div style={{ width: "70%", float: "left" }}>
-              <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
-              <h3>Course Schedule</h3>
-              <p className="no-padding">Fall 2020</p>
-            </div>
             <div>
-              <Button
-                appearance="primary"
-                style={{ display: "block", width: "20%", marginBottom: "5px", maxWidth: "120px" }}
-              >
-                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
-                Add to gCal
-              </Button>
-              <Button
-                appearance="primary"
-                style={{ display: "block", width: "20%", maxWidth: "120px" }}
-              >
-                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
-                Add to iCal
-              </Button>
+              <div style={{ width: "70%", float: "left" }}>
+                <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
+                <h3>Course Schedule</h3>
+                <p className="no-padding">Fall 2020</p>
+              </div>
+              <div>
+                <Button
+                  appearance="primary"
+                  style={{ display: "block", width: "20%", marginBottom: "5px", maxWidth: "120px" }}
+                >
+                  <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+                  Add to gCal
+                </Button>
+                <Button
+                  appearance="primary"
+                  style={{ display: "block", width: "20%", maxWidth: "120px" }}
+                >
+                  <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+                  Add to iCal
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div style={{ height: "438px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item, key) => (
-            <Panel key={key} bordered className="class">
-              <div style={{ width: "100%" }}>
-                <div style={{ width: "50%", float: "left" }}>
-                  <h5>{item.class}</h5>
-                  <p className="no-padding">({item.code})</p>
-                  <p className="no-padding">{item.title}</p>
+          <div style={{ height: "438px", width: "100%", overflow: "auto" }}>
+            {this.state.data.map((item, key) => (
+              <Panel key={key} bordered className="class">
+                <div style={{ width: "100%" }}>
+                  <div style={{ width: "50%", float: "left" }}>
+                    <h5>{item.class}</h5>
+                    <p className="no-padding">({item.code})</p>
+                    <p className="no-padding">{item.title}</p>
+                  </div>
+                  <div>
+                    <p className="no-padding">{item.days}</p>
+                    <p className="no-padding">{item.time}</p>
+                    <p className="no-padding">{item.location}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="no-padding">{item.days}</p>
-                  <p className="no-padding">{item.time}</p>
-                  <p className="no-padding">{item.location}</p>
-                </div>
-              </div>
-            </Panel>
-          ))}
+              </Panel>
+            ))}
+          </div>
         </div>
-      </div>
+      </Panel>
     );
   }
 }

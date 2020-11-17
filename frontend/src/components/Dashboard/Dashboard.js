@@ -6,7 +6,7 @@ import ActionItems from "./ActionItems";
 import Announcements from "./Announcements";
 import CourseSchedule from "./CourseSchedule";
 
-import { Panel, Grid, Row, Col } from "rsuite";
+import { Grid, Row, Col } from "rsuite";
 
 class Home extends Component {
   render() {
@@ -17,31 +17,19 @@ class Home extends Component {
             <Col xs={12}>
               <Grid fluid>
                 <Row>
-                  {/* Announcements */}
-                  <Panel shaded bordered className="panel">
-                    <Announcements />
-                  </Panel>
+                  <Announcements />
                 </Row>
                 <Row>
-                  {/* Action Items */}
-                  <Panel shaded bordered className="panel">
-                    <ActionItems />
-                  </Panel>
+                  <ActionItems />
                 </Row>
               </Grid>
             </Col>
             <Col xs={12}>
               <Row>
-                {/* Academic Progress */}
-                <Panel shaded bordered className="panel">
-                  <AcademicProgress />
-                </Panel>
+                <AcademicProgress />
               </Row>
               <Row>
-                {/* Course Schedule */}
-                <Panel shaded bordered className="panel">
-                  <CourseSchedule />
-                </Panel>
+                <CourseSchedule />
               </Row>
             </Col>
           </Row>
