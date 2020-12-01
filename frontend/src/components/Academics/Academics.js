@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { Grid, Row, Col, Nav } from "rsuite";
 import { CourseSchedule } from "../Dashboard/CourseSchedule";
-import { Link, NavLink, Switch, Route } from "react-router-dom";
+import { NavLink, Switch, Route } from "react-router-dom";
 import AcademicProgress from "../Dashboard/AcademicProgress";
+import GeneralInfo from "./GeneralInfo";
+import Actions from "./Actions";
+import CourseHistory from "./CourseHistory";
+import CourseCredits from "./CourseCredits";
+import TestCredits from "./TestCredits";
 
 export class Academics extends Component {
   constructor() {
@@ -22,35 +27,23 @@ export class Academics extends Component {
     const { active } = this.state;
 
     return (
-      <div className="academics">
-        <div style={{ margin: "15px", padding: "10px", background: "white", borderRadius: "8px" }}>
+      <div>
+        <div className="nav-bar">
           <Nav appearance="" active={active} onSelect={this.handleSelect}>
             <Nav.Item eventKey="1">
-              <NavLink
-                to="/academics/overview"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/academics/overview" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Overview</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="2">
-              <NavLink
-                to="/academics/coursehistory"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/academics/coursehistory" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Course History</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="3">
-              <NavLink
-                to="/academics/transfercourses"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/academics/transfercourses" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Transfer Credit</p>
               </NavLink>
             </Nav.Item>
@@ -64,25 +57,28 @@ export class Academics extends Component {
                 <Col xs={12}>
                   <Grid fluid>
                     <Row>
-                      <CourseSchedule />
+                      <CourseSchedule height="644px" />
                     </Row>
-                    <Row></Row>
                   </Grid>
                 </Col>
                 <Col xs={12}>
                   <Row>
+                    <GeneralInfo />
+                  </Row>
+                  <Row>
+                    <Actions />
+                  </Row>
+                  <Row>
                     <AcademicProgress />
                   </Row>
-                  <Row></Row>
                 </Col>
               </Row>
             </Grid>
           </Route>
-          <Route path="/academics/coursehistory">
-            <div style={{ padding: "15px" }}>Course History</div>
-          </Route>
+          <Route path="/academics/coursehistory" component={CourseHistory} />
           <Route path="/academics/transfercourses">
-            <div style={{ padding: "15px" }}>Transfer Courses</div>
+            <CourseCredits />
+            <TestCredits />
           </Route>
         </Switch>
       </div>

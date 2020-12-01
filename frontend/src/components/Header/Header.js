@@ -28,8 +28,8 @@ function Header() {
             </Nav.Item>
 
             {/* Search Bar */}
-            <div style={{ float: "right", padding: "10px" }}>
-              <InputGroup style={{ width: "1530px", border: "2px solid #003B49" }}>
+            <div style={{ float: "right", padding: "10px", width: "calc(100vw - 370px)" }}>
+              <InputGroup style={{ width: "100%", border: "2px solid #003B49" }}>
                 <Input
                   placeholder="Search"
                   style={{
@@ -48,10 +48,7 @@ function Header() {
           {/* Log Out Button */}
           <Nav pullRight>
             <Link to="/logout">
-              <Nav.Item
-                icon={<Icon icon="sign-out" style={{ color: "#78BE20" }} />}
-                style={{ paddingRight: "10px" }}
-              >
+              <Nav.Item icon={<Icon icon="sign-out" style={{ color: "#78BE20" }} />} style={{ paddingRight: "10px" }}>
                 Log Out
               </Nav.Item>
             </Link>

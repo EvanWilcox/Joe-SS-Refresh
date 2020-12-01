@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./Dashboard.css";
 
 import AcademicProgress from "./AcademicProgress";
 import ActionItems from "./ActionItems";
@@ -29,7 +28,7 @@ class Home extends Component {
                 <AcademicProgress />
               </Row>
               <Row>
-                <CourseSchedule />
+                <CourseSchedule height="438px" />
               </Row>
             </Col>
           </Row>

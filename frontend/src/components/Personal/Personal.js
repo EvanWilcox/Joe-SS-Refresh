@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import "./Personal.css";
+
+import { Content, Nav } from "rsuite";
+import { Switch, Route, NavLink } from "react-router-dom";
 
 import Demographics from "./Demographics";
-
-import { Panel, Nav } from "rsuite";
-import { Link, Switch, Route, NavLink, Redirect } from "react-router-dom";
+import Names from "./Names";
+import Addresses from "./Addresses";
+import PhoneNumbers from "./PhoneNumbers";
+import Emails from "./Emails";
+import Contacts from "./Contacts";
+import Permissions from "./Permissions";
 
 class Profile extends Component {
   constructor() {
@@ -24,89 +29,61 @@ class Profile extends Component {
     const { active } = this.state;
     return (
       <div className="home">
-        <div style={{ margin: "15px", padding: "10px", background: "white", borderRadius: "8px" }}>
+        <div className="nav-bar">
           <Nav appearance="" active={active} onSelect={this.handleSelect}>
             <Nav.Item eventKey="1">
-              <NavLink
-                to="/personal/demographics"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/demographics" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Demographics</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="2">
-              <NavLink
-                to="/personal/names"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/names" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Names</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="3">
-              <NavLink
-                to="/personal/addresses"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/addresses" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Addresses</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="4">
-              <NavLink
-                to="/personal/phonenumbers"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/phonenumbers" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Phone Numbers</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="5">
-              <NavLink
-                to="/personal/emails"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/emails" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Email Addresses</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="6">
-              <NavLink
-                to="/personal/contacts"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/contacts" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Contacts</p>
               </NavLink>
             </Nav.Item>
 
             <Nav.Item eventKey="7">
-              <NavLink
-                to="/personal/permissions"
-                activeClassName="active-link"
-                style={{ textDecoration: "none" }}
-              >
+              <NavLink to="/personal/permissions" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Permissions</p>
               </NavLink>
             </Nav.Item>
           </Nav>
         </div>
 
-        <div style={{ padding: "15px" }}>
+        <div>
           <Switch>
-            <Route path="/personal/demographics">Demographics</Route>
-            <Route path="/personal/names">Names</Route>
-            <Route path="/personal/addresses">Addresses</Route>
-            <Route path="/personal/phonenumbers">Phone Numbers</Route>
-            <Route path="/personal/emails">Emails</Route>
-            <Route path="/personal/contacts">Contacts</Route>
-            <Route path="/personal/permissions">Permissions</Route>
+            <Route path="/personal/demographics" component={Demographics} />
+            <Route path="/personal/names" component={Names} />
+            <Route path="/personal/addresses" component={Addresses} />
+            <Route path="/personal/phonenumbers" component={PhoneNumbers} />
+            <Route path="/personal/emails" component={Emails} />
+            <Route path="/personal/contacts" component={Contacts} />
+            <Route path="/personal/permissions" component={Permissions} />
           </Switch>
         </div>
       </div>

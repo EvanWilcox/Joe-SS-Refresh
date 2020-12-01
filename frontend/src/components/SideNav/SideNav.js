@@ -38,13 +38,13 @@ class SideNav extends React.Component {
           expanded={expanded}
           activeKey={this.state.activeKey}
           onSelect={this.handleSelect}
-          style={{ minHeight: "calc(100vh - 76px)", height: "100%", minWidth: "250px" }}
+          style={{ minHeight: "calc(100vh - 82px)", minWidth: "300px" }}
         >
           {/* defaultOpenKeys={["3", "4"]} */}
           <Sidenav.Body>
             <Nav>
               {/* Picture/Student Name/School */}
-              <Nav.Item style={{ paddingTop: "10px" }}>
+              <Nav.Item style={{ paddingTop: "10px", textAlign: "left" }}>
                 <img
                   src={placeHolderImage}
                   alt="Headshot"
@@ -58,10 +58,7 @@ class SideNav extends React.Component {
 
               {/* Dashboard Button */}
               <Link to="/">
-                <Nav.Item
-                  eventKey="1"
-                  icon={<Icon icon="dashboard" style={{ color: "#78BE20" }} />}
-                >
+                <Nav.Item eventKey="1" icon={<Icon icon="dashboard" style={{ color: "#78BE20" }} />}>
                   Dashboard
                 </Nav.Item>
               </Link>
@@ -75,10 +72,7 @@ class SideNav extends React.Component {
 
               {/* Academics Button */}
               <Link to="/academics">
-                <Nav.Item
-                  eventKey="3"
-                  icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}
-                >
+                <Nav.Item eventKey="3" icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}>
                   Academics
                 </Nav.Item>
               </Link>
