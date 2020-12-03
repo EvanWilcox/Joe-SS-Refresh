@@ -15,14 +15,14 @@ class App extends Component {
           {/* Header */}
           <Header />
 
-          <div className="container" style={{ display: "flex", overflowX: "hidden" }}>
+          <div style={{ display: "flex", overflowX: "hidden" }}>
             {/* Side Nav Bar */}
             <div style={{ minHeight: "calc(100vh - 88px)", height: "100%", float: "left" }}>
               <Sidenav />
             </div>
 
             {/* Main Content */}
-            <div style={{ flexGrow: "1", backgroundColor: "#f0f0f0" }}>
+            <div style={{ flexGrow: "1", backgroundColor: "#f0f0f0", padding: "15px" }}>
               <Switch>
                 <Route path="/personal" component={Personal} />
                 <Route path="/academics" component={Academics} />

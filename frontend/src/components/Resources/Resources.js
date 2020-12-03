@@ -5,8 +5,8 @@ class Resources extends Component {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <div style={{ width: "350px", float: "left", margin: "10px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+        <div style={{ width: "", float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>General Resources</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               Registrar
@@ -22,7 +22,7 @@ class Resources extends Component {
             </Button>
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>News and Events</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               Events Calendar
@@ -38,8 +38,8 @@ class Resources extends Component {
             </Button>
           </Panel>
         </div>
-        <div style={{ width: "350px", float: "left", margin: "10px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+        <div style={{ width: "", float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>Online Resources</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               Library
@@ -55,7 +55,7 @@ class Resources extends Component {
             </Button>
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>Involvement</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               Organizations
@@ -71,8 +71,8 @@ class Resources extends Component {
             </Button>
           </Panel>
         </div>
-        <div style={{ width: "350px", float: "left", margin: "10px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+        <div style={{ width: "", float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>Help and Safety</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               Campus Police
@@ -88,7 +88,7 @@ class Resources extends Component {
             </Button>
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "100%" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
             <h3 style={{ margin: "0px 5%" }}>Other</h3>
             <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
               myHR

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { Content, Nav } from "rsuite";
+import { Nav } from "rsuite";
 import { Switch, Route, NavLink } from "react-router-dom";
 
 import Demographics from "./Demographics";
@@ -17,59 +17,53 @@ class Profile extends Component {
     this.state = {
       active: "1",
     };
-
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  handleSelect(activeKey) {
-    this.setState({ active: activeKey });
   }
 
   render() {
     const { active } = this.state;
     return (
-      <div className="home">
+      <div>
         <div className="nav-bar">
-          <Nav appearance="" active={active} onSelect={this.handleSelect}>
-            <Nav.Item eventKey="1">
+          <Nav appearance="">
+            <Nav.Item>
               <NavLink to="/personal/demographics" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Demographics</p>
+                <p className="nav-text">Demographics</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="2">
+            <Nav.Item>
               <NavLink to="/personal/names" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Names</p>
+                <p className="nav-text">Names</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="3">
+            <Nav.Item>
               <NavLink to="/personal/addresses" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Addresses</p>
+                <p className="nav-text">Addresses</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="4">
+            <Nav.Item>
               <NavLink to="/personal/phonenumbers" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Phone Numbers</p>
+                <p className="nav-text">Phone Numbers</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="5">
+            <Nav.Item>
               <NavLink to="/personal/emails" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Email Addresses</p>
+                <p className="nav-text">Email Addresses</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="6">
+            <Nav.Item>
               <NavLink to="/personal/contacts" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Contacts</p>
+                <p className="nav-text">Contacts</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="7">
+            <Nav.Item>
               <NavLink to="/personal/permissions" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Permissions</p>
+                <p className="nav-text">Permissions</p>
               </NavLink>
             </Nav.Item>
           </Nav>

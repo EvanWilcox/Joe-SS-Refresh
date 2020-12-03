@@ -18,7 +18,7 @@ export class AcademicProgress extends Component {
             <p className="no-padding">Degree Audit Overview</p>
           </div>
 
-          <div style={{ width: "60%", margin: "0 auto" }}>
+          <div style={{ width: "400px", margin: "0 auto" }}>
             <div style={{ float: "left", paddingRight: "20px" }}>
               <Progress.Circle
                 percent={Math.round((this.state.creditsComplete / 128) * 100 * 10) / 10}

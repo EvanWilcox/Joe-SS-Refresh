@@ -31,6 +31,102 @@ export class CourseHistory extends Component {
           course: "COMP SCI 1570",
           description: "Intro to Programming",
         },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "in-progress",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "in-progress",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "in-progress",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "complete",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
+        {
+          status: "in-progress",
+          grade: "A",
+          units: "3.00",
+          term: "2016 Fall Semester",
+          course: "COMP SCI 1570",
+          description: "Intro to Programming",
+        },
       ],
     };
   }
@@ -72,7 +168,7 @@ export class CourseHistory extends Component {
             </p>
           </div>
         </div>
-        <div style={{ maxHeight: 690, width: "100%", overflow: "auto" }}>
+        <div style={{ maxHeight: 660, width: "100%", overflow: "auto" }}>
           {classes.map((item, key) => (
             <Panel key={key} bordered style={{ margin: "5px 0px", padding: "0px", width: "99%" }}>
               <div
@@ -84,7 +180,7 @@ export class CourseHistory extends Component {
                 <div style={{ width: "5%", textAlign: "left" }}>
                   <Icon
                     icon="circle"
-                    style={{ color: item.complete !== "complete" ? "#78BE20" : "yellow", paddingLeft: "10px" }}
+                    style={{ color: item.status === "complete" ? "#78BE20" : "#e87722", paddingLeft: "10px" }}
                     size="lg"
                   ></Icon>
                 </div>

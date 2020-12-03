@@ -95,6 +95,35 @@ export class Finance extends Component {
             },
           ],
         },
+        {
+          term: "Missouri S&T 2019-2020",
+          scholarships: [
+            {
+              description: "Bright Flight",
+              category: "Scholarship",
+              offeredAmount: 3000,
+              acceptedAmount: 3000,
+            },
+            {
+              description: "Trustees Scholarship",
+              category: "Scholarship",
+              offeredAmount: 3500,
+              acceptedAmount: 3500,
+            },
+            {
+              description: "University Scholarship",
+              category: "Scholarship",
+              offeredAmount: 2000,
+              acceptedAmount: 2000,
+            },
+            {
+              description: "CS Department Scholarship",
+              category: "Scholarship",
+              offeredAmount: 250,
+              acceptedAmount: 250,
+            },
+          ],
+        },
       ],
     };
 
@@ -113,7 +142,7 @@ export class Finance extends Component {
         <div className="nav-bar">
           <Nav appearance="" active={active} onSelect={this.handleSelect}>
             <Nav.Item eventKey="1">
-              <NavLink to="/finance/overview" activeClassName="active-link" style={{ textDecoration: "none" }}>
+              <NavLink exact to="/finance" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Overview</p>
               </NavLink>
             </Nav.Item>
@@ -127,7 +156,7 @@ export class Finance extends Component {
         </div>
 
         <Switch>
-          <Route path="/finance/overview">
+          <Route exact path="/finance">
             <div style={{ width: "100%" }}>
               <div style={{ width: "400px", float: "left" }}>
                 <Panel shaded bordered className="panel">
@@ -149,7 +178,7 @@ export class Finance extends Component {
                   </Button>
                 </Panel>
 
-                <Panel shaded bordered className="panel" style={{ marginTop: "20px" }}>
+                <Panel shaded bordered className="panel">
                   <h4>Billing Dates</h4>
                   <p>Fall 2020</p>
                   <div className="header-bar">
@@ -225,7 +254,7 @@ export class Finance extends Component {
                     </p>
                   </Panel>
                 </Panel>
-                <Panel shaded bordered className="panel" style={{ marginTop: "20px" }}>
+                <Panel shaded bordered className="panel">
                   <div style={{ width: "70%", float: "left", marginBottom: "10px" }}>
                     <Icon
                       style={{ float: "left", paddingRight: "15px", paddingTop: "5px" }}
@@ -254,93 +283,95 @@ export class Finance extends Component {
           <Route path="/finance/financialaid">
             <div style={{ maxHeight: 780, width: "100%", overflow: "auto" }}>
               {data.map((item, key) => (
-                <Panel
-                  header={<h4>{item.term}</h4>}
-                  style={{ backgroundColor: "white", paddingLeft: "10px", margin: "15px" }}
-                  key={key}
-                  collapsible
-                  shaded
-                  bordered
-                >
-                  <p>Currency used is US Dollar.</p>
-                  <div className="header-bar">
-                    <div style={{ textAlign: "left", marginLeft: "1.3%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>Award Description</strong>
-                      </p>
-                    </div>
-                    <div style={{ textAlign: "left", marginLeft: "7%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>Category</strong>
-                      </p>
-                    </div>
-                    <div style={{ textAlign: "left", marginLeft: "6%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>Offered</strong>
-                      </p>
-                    </div>
-                    <div style={{ textAlign: "left", marginLeft: "6.8%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>Accepted</strong>
-                      </p>
-                    </div>
-                  </div>
+                <div>
+                  <Panel
+                    header={<h4>{item.term}</h4>}
+                    style={{ backgroundColor: "white", paddingLeft: "10px", margin: "15px" }}
+                    key={key}
+                    collapsible
+                    shaded
+                    bordered
+                    defaultExpanded={key === data.length - 1}
+                  >
+                    <p>Currency used is US Dollar.</p>
 
-                  {item.scholarships.map((scholarship, key) => (
-                    <div>
-                      <Panel key={key} bordered style={{ margin: "5px 0px", padding: "0px" }}>
-                        <div style={{ width: "100%", display: "flex" }}>
-                          <div className="scholarship-item" style={{ width: "15%" }}>
-                            <strong>{scholarship.description}</strong>
-                          </div>
-                          <div className="scholarship-item" style={{ width: "10%" }}>
-                            <strong>{scholarship.category}</strong>
-                          </div>
-                          <div className="scholarship-item" style={{ width: "10%" }}>
-                            <strong>{new Intl.NumberFormat().format(scholarship.offeredAmount)}</strong>
-                          </div>
-                          <div className="scholarship-item" style={{ width: "10%" }}>
-                            <strong>{new Intl.NumberFormat().format(scholarship.acceptedAmount)}</strong>
-                          </div>
-                        </div>
-                      </Panel>
+                    <div className="header-bar">
+                      <div style={{ textAlign: "left", marginLeft: "1.3%" }}>
+                        <p className="header-bar-text">Award Description</p>
+                      </div>
+                      <div style={{ textAlign: "left", marginLeft: "7%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>Category</strong>
+                        </p>
+                      </div>
+                      <div style={{ textAlign: "left", marginLeft: "6%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>Offered</strong>
+                        </p>
+                      </div>
+                      <div style={{ textAlign: "left", marginLeft: "6.8%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>Accepted</strong>
+                        </p>
+                      </div>
                     </div>
-                  ))}
-                  <div className="header-bar">
-                    <div style={{ textAlign: "left", marginLeft: "1.3%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>Academic Year Totals</strong>
-                      </p>
+
+                    {item.scholarships.map((scholarship, key) => (
+                      <div>
+                        <Panel key={key} bordered style={{ margin: "5px 0px", padding: "0px" }}>
+                          <div style={{ width: "100%", display: "flex" }}>
+                            <div className="scholarship-item" style={{ width: "15%" }}>
+                              <strong>{scholarship.description}</strong>
+                            </div>
+                            <div className="scholarship-item" style={{ width: "10%" }}>
+                              <strong>{scholarship.category}</strong>
+                            </div>
+                            <div className="scholarship-item" style={{ width: "10%" }}>
+                              <strong>{new Intl.NumberFormat().format(scholarship.offeredAmount)}</strong>
+                            </div>
+                            <div className="scholarship-item" style={{ width: "10%" }}>
+                              <strong>{new Intl.NumberFormat().format(scholarship.acceptedAmount)}</strong>
+                            </div>
+                          </div>
+                        </Panel>
+                      </div>
+                    ))}
+                    <div className="header-bar">
+                      <div style={{ textAlign: "left", marginLeft: "1.3%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>Academic Year Totals</strong>
+                        </p>
+                      </div>
+                      <div style={{ textAlign: "left", marginLeft: "15.8%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>
+                            {new Intl.NumberFormat().format(
+                              item.scholarships.reduce(function (a, b) {
+                                return parseInt(a) + parseInt(b["offeredAmount"]);
+                              }, 0)
+                            )}
+                          </strong>
+                        </p>
+                      </div>
+                      <div style={{ textAlign: "left", marginLeft: "7.6%" }}>
+                        <p style={{ padding: "5px 0px" }}>
+                          <strong>
+                            {new Intl.NumberFormat().format(
+                              item.scholarships.reduce(function (a, b) {
+                                return parseInt(a) + parseInt(b["acceptedAmount"]);
+                              }, 0)
+                            )}
+                          </strong>
+                        </p>
+                      </div>
                     </div>
-                    <div style={{ textAlign: "left", marginLeft: "15.8%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>
-                          {new Intl.NumberFormat().format(
-                            item.scholarships.reduce(function (a, b) {
-                              return parseInt(a) + parseInt(b["offeredAmount"]);
-                            }, 0)
-                          )}
-                        </strong>
-                      </p>
-                    </div>
-                    <div style={{ textAlign: "left", marginLeft: "7.6%" }}>
-                      <p style={{ padding: "5px 0px" }}>
-                        <strong>
-                          {new Intl.NumberFormat().format(
-                            item.scholarships.reduce(function (a, b) {
-                              return parseInt(a) + parseInt(b["acceptedAmount"]);
-                            }, 0)
-                          )}
-                        </strong>
-                      </p>
-                    </div>
-                  </div>
-                  <p>
-                    Your financial aid award is determined from the information provided on your financial aid
-                    application. If there is no financial aid displayed, your application may be in progress. Please
-                    check back in a few days.
-                  </p>
-                </Panel>
+                    <p>
+                      Your financial aid award is determined from the information provided on your financial aid
+                      application. If there is no financial aid displayed, your application may be in progress. Please
+                      check back in a few days.
+                    </p>
+                  </Panel>
+                </div>
               ))}
             </div>
           </Route>

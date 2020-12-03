@@ -74,7 +74,7 @@ export class Announcements extends Component {
                     />
                   </div>
 
-                  <div>
+                  <div style={{ paddingRight: "15px" }}>
                     <h4>{item.title}</h4>
                     <p>{item.text}</p>
                     <br />

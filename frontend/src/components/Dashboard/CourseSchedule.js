@@ -45,7 +45,7 @@ export class CourseSchedule extends Component {
           code: "LEC 69420",
           title: "Intro to Cyber Security",
           days: "Tues, Thurs",
-          time: "9:30AM - 10:45AM",
+          time: "2:00PM - 3:15PM",
           location: "Arranged",
         },
       ],
@@ -67,13 +67,17 @@ export class CourseSchedule extends Component {
           <div>
             <Button
               appearance="primary"
-              style={{ display: "block", width: "20%", marginBottom: "5px", maxWidth: "120px" }}
+              style={{ display: "block", width: "20%", minWidth: "120px", marginBottom: "5px", maxWidth: "120px" }}
               href="#"
             >
               <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
               Add to gCal
             </Button>
-            <Button appearance="primary" style={{ display: "block", width: "20%", maxWidth: "120px" }} href="#">
+            <Button
+              appearance="primary"
+              style={{ display: "block", width: "20%", minWidth: "120px", maxWidth: "120px" }}
+              href="#"
+            >
               <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
               Add to iCal
             </Button>

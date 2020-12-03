@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import { Icon, Panel } from "rsuite";
 
-import GreenCheck from "../../assets/GreenCheck.png";
-import GrayCheck from "../../assets/GrayCheck.png";
-
-export class ActionItems extends Component {
+class ActionItems extends Component {
   constructor(props) {
     super(props);
 
@@ -29,6 +26,7 @@ export class ActionItems extends Component {
       ],
     };
   }
+
   render() {
     return (
       <Panel shaded bordered className="panel">
@@ -48,11 +46,10 @@ export class ActionItems extends Component {
                     <p>{item.text}</p>
                   </div>
                   <div style={{ width: "20%", float: "right", textAlign: "right" }}>
-                    <img
-                      src={item.complete ? GreenCheck : GrayCheck}
-                      width="40px"
-                      style={{ paddingTop: "9px", paddingRight: "5px" }}
-                      alt="Checkmark"
+                    <Icon
+                      icon="check-circle"
+                      size="3x"
+                      style={{ color: item.complete ? "#78BE20" : "#DCE3E4", padding: "5px 15px" }}
                     />
                   </div>
                 </div>

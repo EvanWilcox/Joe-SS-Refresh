@@ -23,6 +23,7 @@ export class Permissions extends Component {
           financialAid: true,
         },
       ],
+
       ferpaUsers: [
         {
           name: "Father Name",
@@ -42,7 +43,7 @@ export class Permissions extends Component {
     const { additionalAuthorizedUsers, ferpaUsers } = this.state;
 
     return (
-      <div style={{ maxHeight: 790, width: "100%", overflow: "auto" }}>
+      <div style={{ maxHeight: 770, width: "100%", overflow: "auto" }}>
         <Panel bordered shaded className="panel">
           <h4>Additional Authorized Access</h4>
           <p>

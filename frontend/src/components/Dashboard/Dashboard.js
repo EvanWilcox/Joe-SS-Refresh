@@ -5,34 +5,18 @@ import ActionItems from "./ActionItems";
 import Announcements from "./Announcements";
 import CourseSchedule from "./CourseSchedule";
 
-import { Grid, Row, Col } from "rsuite";
-
 class Home extends Component {
   render() {
     return (
-      <div className="home">
-        <Grid fluid>
-          <Row>
-            <Col xs={12}>
-              <Grid fluid>
-                <Row>
-                  <Announcements />
-                </Row>
-                <Row>
-                  <ActionItems />
-                </Row>
-              </Grid>
-            </Col>
-            <Col xs={12}>
-              <Row>
-                <AcademicProgress />
-              </Row>
-              <Row>
-                <CourseSchedule height="438px" />
-              </Row>
-            </Col>
-          </Row>
-        </Grid>
+      <div style={{ width: "100%" }}>
+        <div style={{ float: "left", width: "50%", minWidth: "600px", overflow: "auto" }}>
+          <Announcements />
+          <ActionItems />
+        </div>
+        <div style={{ float: "left", width: "50%", minWidth: "600px" }}>
+          <AcademicProgress />
+          <CourseSchedule height="438px" />
+        </div>
       </div>
     );
   }

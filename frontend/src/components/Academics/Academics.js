@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Grid, Row, Col, Nav } from "rsuite";
+import { Nav } from "rsuite";
 import { CourseSchedule } from "../Dashboard/CourseSchedule";
 import { NavLink, Switch, Route } from "react-router-dom";
+
 import AcademicProgress from "../Dashboard/AcademicProgress";
 import GeneralInfo from "./GeneralInfo";
 import Actions from "./Actions";
@@ -31,7 +32,7 @@ export class Academics extends Component {
         <div className="nav-bar">
           <Nav appearance="" active={active} onSelect={this.handleSelect}>
             <Nav.Item eventKey="1">
-              <NavLink to="/academics/overview" activeClassName="active-link" style={{ textDecoration: "none" }}>
+              <NavLink exact to="/academics" activeClassName="active-link" style={{ textDecoration: "none" }}>
                 <p className="nav-item">Overview</p>
               </NavLink>
             </Nav.Item>
@@ -51,30 +52,19 @@ export class Academics extends Component {
         </div>
 
         <Switch>
-          <Route path="/academics/overview">
-            <Grid fluid>
-              <Row>
-                <Col xs={12}>
-                  <Grid fluid>
-                    <Row>
-                      <CourseSchedule height="644px" />
-                    </Row>
-                  </Grid>
-                </Col>
-                <Col xs={12}>
-                  <Row>
-                    <GeneralInfo />
-                  </Row>
-                  <Row>
-                    <Actions />
-                  </Row>
-                  <Row>
-                    <AcademicProgress />
-                  </Row>
-                </Col>
-              </Row>
-            </Grid>
+          <Route exact path="/academics">
+            <div style={{ width: "100%" }}>
+              <div style={{ float: "left", width: "50%", minWidth: "600px" }}>
+                <CourseSchedule height="615px" />
+              </div>
+              <div style={{ float: "left", width: "50%", minWidth: "600px" }}>
+                <GeneralInfo />
+                <Actions />
+                <AcademicProgress />
+              </div>
+            </div>
           </Route>
+
           <Route path="/academics/coursehistory" component={CourseHistory} />
           <Route path="/academics/transfercourses">
             <CourseCredits />

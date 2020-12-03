@@ -24,7 +24,12 @@ function Header() {
               <Icon icon="bars" size="2x" />
             </Nav.Item>
             <Nav.Item>
-              <p style={{ fontSize: "25px" }}>Joe'SS Portal</p>
+              <Link
+                to="/"
+                style={{ fontSize: "25px", textDecoration: "none", color: "white", margin: "0px 0px 10px 0px" }}
+              >
+                Joe'SS Portal
+              </Link>
             </Nav.Item>
 
             {/* Search Bar */}

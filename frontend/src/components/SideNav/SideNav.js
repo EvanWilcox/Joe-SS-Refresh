@@ -1,15 +1,17 @@
 import React from "react";
-import { Nav, Sidenav, Icon } from "rsuite";
+import { Nav, Sidenav, Icon, Toggle } from "rsuite";
 import { Link } from "react-router-dom";
 import placeHolderImage from "../../assets/person.png";
 
 class SideNav extends React.Component {
   constructor() {
     super();
+
     this.state = {
       expanded: true,
       activeKey: "1",
     };
+
     this.handleToggle = this.handleToggle.bind(this);
     this.handleSelect = this.handleSelect.bind(this);
   }
@@ -19,28 +21,29 @@ class SideNav extends React.Component {
       expanded: !this.state.expanded,
     });
   }
+
   handleSelect(eventKey) {
+    console.log(eventKey);
     this.setState({
       activeKey: eventKey,
     });
   }
 
   render() {
-    const { expanded } = this.state;
+    const { expanded, activeKey } = this.state;
 
     return (
-      <div style={{}}>
+      <div style={{ height: "100%" }}>
         {/* For Testing Purposes */}
         {/* <Toggle onChange={this.handleToggle} checked={expanded} /> */}
 
         <Sidenav
           appearance="inverse"
           expanded={expanded}
-          activeKey={this.state.activeKey}
+          activeKey={activeKey}
           onSelect={this.handleSelect}
-          style={{ minHeight: "calc(100vh - 82px)", minWidth: "300px" }}
+          style={{ height: "100%", minHeight: "calc(100vh - 82px)", minWidth: "300px" }}
         >
-          {/* defaultOpenKeys={["3", "4"]} */}
           <Sidenav.Body>
             <Nav>
               {/* Picture/Student Name/School */}
@@ -52,47 +55,47 @@ class SideNav extends React.Component {
                   height="140"
                   style={{ borderRadius: "50%", border: "5px solid #78BE20" }}
                 />
-                <p style={{ fontSize: "26px", paddingTop: "10px" }}>Evan Wilcox</p>
+                <p style={{ fontSize: "26px", paddingTop: "10px" }}>Christopher Gu</p>
                 <p>Student | Missouri S&T</p>
               </Nav.Item>
 
               {/* Dashboard Button */}
-              <Link to="/">
+              <Link to="/" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="1" icon={<Icon icon="dashboard" style={{ color: "#78BE20" }} />}>
                   Dashboard
                 </Nav.Item>
               </Link>
 
               {/* Personal Button */}
-              <Link to="/personal">
+              <Link to="/personal/demographics" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="2" icon={<Icon icon="user" style={{ color: "#78BE20" }} />}>
                   Personal
                 </Nav.Item>
               </Link>
 
               {/* Academics Button */}
-              <Link to="/academics">
+              <Link to="/academics" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="3" icon={<Icon icon="mortar-board" style={{ color: "#78BE20" }} />}>
                   Academics
                 </Nav.Item>
               </Link>
 
               {/* Finance Button */}
-              <Link to="/finance">
+              <Link to="/finance" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="4" icon={<Icon icon="money" style={{ color: "#78BE20" }} />}>
                   Finance
                 </Nav.Item>
               </Link>
 
-              {/* Benefits & Resources Button */}
-              <Link to="/resources">
+              {/* Resources Button */}
+              <Link to="/resources" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="5" icon={<Icon icon="link" style={{ color: "#78BE20" }} />}>
-                  Benefits & Resources
+                  Resources
                 </Nav.Item>
               </Link>
 
               {/* Settings Button */}
-              <Link to="/settings">
+              <Link to="/settings" style={{ textDecoration: "none" }}>
                 <Nav.Item eventKey="6" icon={<Icon icon="gear" style={{ color: "#78BE20" }} />}>
                   Settings
                 </Nav.Item>

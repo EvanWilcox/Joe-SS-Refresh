@@ -6,12 +6,12 @@ a {
   color: #78be20;
 }
 
-.nav-item {
+.nav-text {
   font-size: 18px;
   font-weight: bold;
 }
 
-.nav-item:hover {
+.nav-text:hover {
   color: #e87722;
 }
 
@@ -94,4 +94,29 @@ Button a {
   margin-top: 10px;
   border-radius: 8px;
   display: flex;
+}
+
+.header-bar-text {
+  padding: 5px 0px;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background-color: transparent;
+  outline: none;
+}
+
+.table-container {
+  max-height: 770px;
+  width: 100%;
+  overflow: auto;
+}
+
+.panel-table {
+  max-height: 750px;
 }
