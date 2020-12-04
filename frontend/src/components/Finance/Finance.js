@@ -135,14 +135,25 @@ export class Finance extends Component {
         <div className="nav-bar">
           <Nav appearance="">
             <Nav.Item>
-              <NavLink exact to="/finance" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Overview</p>
+              <NavLink
+                exact
+                to="/finance"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Overview
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/finance/financialaid" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Financial Aid</p>
+              <NavLink
+                to="/finance/financialaid"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Financial Aid
               </NavLink>
             </Nav.Item>
           </Nav>
@@ -310,24 +321,22 @@ export class Finance extends Component {
                     </div>
 
                     {item.scholarships.map((scholarship, key) => (
-                      <div>
-                        <Panel key={key} bordered style={{ margin: "5px 0px", padding: "0px" }}>
-                          <div style={{ width: "100%", display: "flex" }}>
-                            <div className="scholarship-item" style={{ width: "15%" }}>
-                              <strong>{scholarship.description}</strong>
-                            </div>
-                            <div className="scholarship-item" style={{ width: "10%" }}>
-                              <strong>{scholarship.category}</strong>
-                            </div>
-                            <div className="scholarship-item" style={{ width: "10%" }}>
-                              <strong>{new Intl.NumberFormat().format(scholarship.offeredAmount)}</strong>
-                            </div>
-                            <div className="scholarship-item" style={{ width: "10%" }}>
-                              <strong>{new Intl.NumberFormat().format(scholarship.acceptedAmount)}</strong>
-                            </div>
+                      <Panel key={key} bordered style={{ margin: "5px 0px", padding: "0px" }}>
+                        <div style={{ width: "100%", display: "flex" }}>
+                          <div className="scholarship-item" style={{ width: "15%" }}>
+                            <strong>{scholarship.description}</strong>
                           </div>
-                        </Panel>
-                      </div>
+                          <div className="scholarship-item" style={{ width: "10%" }}>
+                            <strong>{scholarship.category}</strong>
+                          </div>
+                          <div className="scholarship-item" style={{ width: "10%" }}>
+                            <strong>{new Intl.NumberFormat().format(scholarship.offeredAmount)}</strong>
+                          </div>
+                          <div className="scholarship-item" style={{ width: "10%" }}>
+                            <strong>{new Intl.NumberFormat().format(scholarship.acceptedAmount)}</strong>
+                          </div>
+                        </div>
+                      </Panel>
                     ))}
                     <div className="header-bar">
                       <div style={{ textAlign: "left", marginLeft: "1.3%" }}>

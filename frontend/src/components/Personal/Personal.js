@@ -18,44 +18,79 @@ class Profile extends Component {
         <div className="nav-bar">
           <Nav appearance="">
             <Nav.Item>
-              <NavLink to="/personal/demographics" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Demographics</p>
+              <NavLink
+                to="/personal/demographics"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Demographics
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/names" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Names</p>
+              <NavLink
+                to="/personal/names"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Names
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/addresses" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Addresses</p>
+              <NavLink
+                to="/personal/addresses"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Addresses
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/phonenumbers" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Phone Numbers</p>
+              <NavLink
+                to="/personal/phonenumbers"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Phone Numbers
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/emails" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Email Addresses</p>
+              <NavLink
+                to="/personal/emails"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Email Addresses
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/contacts" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Contacts</p>
+              <NavLink
+                to="/personal/contacts"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Contacts
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/personal/permissions" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Permissions</p>
+              <NavLink
+                to="/personal/permissions"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Permissions
               </NavLink>
             </Nav.Item>
           </Nav>

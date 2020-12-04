@@ -17,20 +17,36 @@ export class Academics extends Component {
         <div className="nav-bar">
           <Nav appearance="">
             <Nav.Item>
-              <NavLink exact to="/academics" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Overview</p>
+              <NavLink
+                exact
+                to="/academics"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Overview
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/academics/coursehistory" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Course History</p>
+              <NavLink
+                to="/academics/coursehistory"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Course History
               </NavLink>
             </Nav.Item>
 
             <Nav.Item>
-              <NavLink to="/academics/transfercourses" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-text">Transfer Credit</p>
+              <NavLink
+                to="/academics/transfercourses"
+                className="nav-text"
+                activeClassName="active-link"
+                style={{ textDecoration: "none" }}
+              >
+                Transfer Credit
               </NavLink>
             </Nav.Item>
           </Nav>
