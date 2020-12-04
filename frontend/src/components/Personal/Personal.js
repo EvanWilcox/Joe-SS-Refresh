@@ -12,15 +12,7 @@ import Contacts from "./Contacts";
 import Permissions from "./Permissions";
 
 class Profile extends Component {
-  constructor() {
-    super();
-    this.state = {
-      active: "1",
-    };
-  }
-
   render() {
-    const { active } = this.state;
     return (
       <div>
         <div className="nav-bar">

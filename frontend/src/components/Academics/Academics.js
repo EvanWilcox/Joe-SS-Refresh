@@ -11,41 +11,26 @@ import CourseCredits from "./CourseCredits";
 import TestCredits from "./TestCredits";
 
 export class Academics extends Component {
-  constructor() {
-    super();
-    this.state = {
-      active: "1",
-    };
-
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  handleSelect(activeKey) {
-    this.setState({ active: activeKey });
-  }
-
   render() {
-    const { active } = this.state;
-
     return (
       <div>
         <div className="nav-bar">
-          <Nav appearance="" active={active} onSelect={this.handleSelect}>
-            <Nav.Item eventKey="1">
+          <Nav appearance="">
+            <Nav.Item>
               <NavLink exact to="/academics" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Overview</p>
+                <p className="nav-text">Overview</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="2">
+            <Nav.Item>
               <NavLink to="/academics/coursehistory" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Course History</p>
+                <p className="nav-text">Course History</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="3">
+            <Nav.Item>
               <NavLink to="/academics/transfercourses" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Transfer Credit</p>
+                <p className="nav-text">Transfer Credit</p>
               </NavLink>
             </Nav.Item>
           </Nav>

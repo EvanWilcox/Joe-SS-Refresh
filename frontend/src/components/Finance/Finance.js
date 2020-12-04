@@ -6,7 +6,6 @@ export class Finance extends Component {
   constructor() {
     super();
     this.state = {
-      active: "1",
       data: [
         {
           term: "Missouri S&T 2016-2017",
@@ -126,30 +125,24 @@ export class Finance extends Component {
         },
       ],
     };
-
-    this.handleSelect = this.handleSelect.bind(this);
-  }
-
-  handleSelect(activeKey) {
-    this.setState({ active: activeKey });
   }
 
   render() {
-    const { active, data } = this.state;
+    const { data } = this.state;
 
     return (
       <div>
         <div className="nav-bar">
-          <Nav appearance="" active={active} onSelect={this.handleSelect}>
-            <Nav.Item eventKey="1">
+          <Nav appearance="">
+            <Nav.Item>
               <NavLink exact to="/finance" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Overview</p>
+                <p className="nav-text">Overview</p>
               </NavLink>
             </Nav.Item>
 
-            <Nav.Item eventKey="2">
+            <Nav.Item>
               <NavLink to="/finance/financialaid" activeClassName="active-link" style={{ textDecoration: "none" }}>
-                <p className="nav-item">Financial Aid</p>
+                <p className="nav-text">Financial Aid</p>
               </NavLink>
             </Nav.Item>
           </Nav>
