@@ -1,107 +1,74 @@
 import React, { Component } from "react";
 import { Panel, Button } from "rsuite";
 
+function ResourceButton(props) {
+  return (
+    <Button
+      appearance="primary"
+      className="resource-btn"
+      style={{ textAlign: "left", width: "90%" }}
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {props.label}
+    </Button>
+  );
+}
+
 class Resources extends Component {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <div style={{ width: "", float: "left", margin: "0px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+        <div style={{ float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>General Resources</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Registrar
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Cashier's Office
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Fitness Center
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Student Parking
-            </Button>
+            <ResourceButton label="Registrar" link="https://registrar.mst.edu/" />
+            <ResourceButton label="Cashier's Office" link="https://cashier.mst.edu/" />
+            <ResourceButton label="Fitness Center" link="https://studentrec.mst.edu/fitness-center/" />
+            <ResourceButton label="Student Parking" link="https://police.mst.edu/parking/student-parking/" />
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>News and Events</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Events Calendar
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Campus News
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Student News
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Research News
-            </Button>
+            <ResourceButton label="Events Calendar" link="https://calendar.mst.edu/" />
+            <ResourceButton label="Campus News" link="https://news.mst.edu/" />
+            <ResourceButton label="Student News" link="https://econnection.mst.edu/category/student-news/" />
+            <ResourceButton label="Research News" link="https://news.mst.edu/category/research/" />
           </Panel>
         </div>
-        <div style={{ width: "", float: "left", margin: "0px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+        <div style={{ float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Online Resources</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Library
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Canvas
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              S&T Email
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Career Opportunities
-            </Button>
+            <ResourceButton label="Library" link="https://library.mst.edu/" />
+            <ResourceButton label="Canvas" link="https://canvas.mst.edu/" />
+            <ResourceButton label="S&T Email" link="https://it.mst.edu/services/email/student-email/" />
+            <ResourceButton label="Career Opportunities" link="https://career.mst.edu/" />
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Involvement</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Organizations
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Volunteerism
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Greek Life
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Find Your Fit
-            </Button>
+            <ResourceButton label="Organizations" link="https://involvement.mst.edu/organizations/stuorgsites/" />
+            <ResourceButton label="Volunteerism" link="https://involvement.mst.edu/volunteer/" />
+            <ResourceButton label="Greek Life" link="https://involvement.mst.edu/fraternityandsororitylife/" />
+            <ResourceButton label="Find Your Fit" link="https://news.mst.edu/2020/10/finding-the-right-fit/" />
           </Panel>
         </div>
-        <div style={{ width: "", float: "left", margin: "0px" }}>
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+        <div style={{ float: "left", margin: "0px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Help and Safety</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Campus Police
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Health and Wellbeing
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              IT Help Desk
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              S&T Alert
-            </Button>
+            <ResourceButton label="Campus Police" link="https://police.mst.edu/" />
+            <ResourceButton label="Health and Wellbeing" link="" />
+            <ResourceButton label="IT Help Desk" link="https://wellbeing.mst.edu/" />
+            <ResourceButton label="S&T Alert" link="https://mstalert.com/" />
           </Panel>
 
-          <Panel shaded bordered className="panel" style={{ width: "350px" }}>
+          <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Other</h3>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              myHR
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Official Policies
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Dinning Options
-            </Button>
-            <Button appearance="primary" className="resource-btn" style={{ textAlign: "left" }} href="#">
-              Residential Life
-            </Button>
+            <ResourceButton label="myHR" link="https://hr.mst.edu/" />
+            <ResourceButton label="Official Policies" link="https://policy.mst.edu/" />
+            <ResourceButton label="Dining Options" link="https://reslife.mst.edu/diningoptions/dininglocations/" />
+            <ResourceButton label="Residential Life" link="https://reslife.mst.edu/" />
           </Panel>
         </div>
       </div>
