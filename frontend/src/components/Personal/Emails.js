@@ -17,12 +17,6 @@ export class Emails extends Component {
     super(props);
     this.state = {
       show: false,
-      key: 3,
-      formValue: {
-        type: "",
-        email: "",
-        preferred: false,
-      },
       data: [
         {
           type: "UM",
@@ -71,7 +65,7 @@ export class Emails extends Component {
     if (key < this.state.data.length) {
       this.setState({ show: true, formValue: this.state.data[key], key: key });
     } else {
-      this.setState({ show: true, formValue: { type: "", email: "", preferred: false }, key: key });
+      this.setState({ show: true, formValue: {}, key: key });
     }
   }
 
@@ -109,9 +103,9 @@ export class Emails extends Component {
                 <ControlLabel>Email Address</ControlLabel>
                 <FormControl name="email" />
               </FormGroup>
-              <FormGroup>
-                <Checkbox name="preferred">Preferred?</Checkbox>
-              </FormGroup>
+              <FormControl name="checkbox" accepter={CheckboxGroup}>
+                <Checkbox value="preferred">Preferred?</Checkbox>
+              </FormControl>
             </Form>
           </Modal.Body>
           <Modal.Footer>

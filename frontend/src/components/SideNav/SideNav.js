@@ -1,9 +1,9 @@
-import React from "react";
-import { Nav, Sidenav, Icon, Toggle } from "rsuite";
+import React, { Component } from "react";
+import { Nav, Sidenav, Icon } from "rsuite";
 import { Link } from "react-router-dom";
 import placeHolderImage from "../../assets/person.png";
 
-class SideNav extends React.Component {
+class SideNav extends Component {
   constructor() {
     super();
 
@@ -34,9 +34,6 @@ class SideNav extends React.Component {
 
     return (
       <div style={{ height: "100%" }}>
-        {/* For Testing Purposes */}
-        {/* <Toggle onChange={this.handleToggle} checked={expanded} /> */}
-
         <Sidenav
           appearance="inverse"
           expanded={expanded}

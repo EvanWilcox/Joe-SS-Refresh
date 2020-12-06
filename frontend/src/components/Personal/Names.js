@@ -4,13 +4,9 @@ import { Panel, Icon, Button, Modal, Form, FormGroup, FormControl, ControlLabel 
 export class Names extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       show: false,
-      key: 3,
-      formValue: {
-        type: "",
-        name: "",
-      },
       data: [
         {
           type: "Primary",
@@ -51,7 +47,7 @@ export class Names extends Component {
     if (key < this.state.data.length) {
       this.setState({ show: true, formValue: this.state.data[key], key: key });
     } else {
-      this.setState({ show: true, formValue: { type: "", name: "" }, key: key });
+      this.setState({ show: true, formValue: {}, key: key });
     }
   }
 

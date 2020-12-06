@@ -6,7 +6,7 @@ function ResourceButton(props) {
     <Button
       appearance="primary"
       className="resource-btn"
-      style={{ textAlign: "left", width: "90%" }}
+      style={{ textAlign: "left", width: "90%", margin: "5px 5%" }}
       href={props.link}
       target="_blank"
       rel="noopener noreferrer"
@@ -20,7 +20,7 @@ class Resources extends Component {
   render() {
     return (
       <div style={{ width: "100%" }}>
-        <div style={{ float: "left", margin: "0px" }}>
+        <div style={{ float: "left" }}>
           <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>General Resources</h3>
             <ResourceButton label="Registrar" link="https://registrar.mst.edu/" />
@@ -37,7 +37,7 @@ class Resources extends Component {
             <ResourceButton label="Research News" link="https://news.mst.edu/category/research/" />
           </Panel>
         </div>
-        <div style={{ float: "left", margin: "0px" }}>
+        <div style={{ float: "left" }}>
           <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Online Resources</h3>
             <ResourceButton label="Library" link="https://library.mst.edu/" />
@@ -54,7 +54,7 @@ class Resources extends Component {
             <ResourceButton label="Find Your Fit" link="https://news.mst.edu/2020/10/finding-the-right-fit/" />
           </Panel>
         </div>
-        <div style={{ float: "left", margin: "0px" }}>
+        <div style={{ float: "left" }}>
           <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Help and Safety</h3>
             <ResourceButton label="Campus Police" link="https://police.mst.edu/" />
