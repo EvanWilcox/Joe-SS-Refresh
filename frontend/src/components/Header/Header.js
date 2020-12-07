@@ -23,14 +23,28 @@ function Header() {
             <Nav.Item>
               <Icon icon="bars" size="2x" />
             </Nav.Item>
-            <Nav.Item style={{ fontSize: "30px" }}>Joe'SS Portal</Nav.Item>
+            <Nav.Item>
+              <Link
+                to="/"
+                style={{ fontSize: "25px", textDecoration: "none", color: "white", margin: "0px 0px 10px 0px" }}
+              >
+                Joe'SS Portal
+              </Link>
+            </Nav.Item>
 
             {/* Search Bar */}
-            <div style={{ float: "right", padding: "10px" }}>
-              <InputGroup style={{ width: "400" }}>
-                <Input placeholder="Search" />
-                <InputGroup.Button>
-                  <Icon icon="search" />
+            <div style={{ float: "right", padding: "10px", width: "calc(100vw - 370px)" }}>
+              <InputGroup style={{ width: "100%", border: "2px solid #003B49" }}>
+                <Input
+                  placeholder="Search"
+                  style={{
+                    border: "2px solid #002B36",
+                    backgroundColor: "#002B36",
+                    color: "white",
+                  }}
+                />
+                <InputGroup.Button style={{ backgroundColor: "#002B36" }}>
+                  <Icon icon="search" style={{ color: "#78BE20" }} />
                 </InputGroup.Button>
               </InputGroup>
             </div>
@@ -39,10 +53,7 @@ function Header() {
           {/* Log Out Button */}
           <Nav pullRight>
             <Link to="/logout">
-              <Nav.Item
-                icon={<Icon icon="sign-out" style={{ color: "#78BE20" }} />}
-                style={{ paddingRight: "10px" }}
-              >
+              <Nav.Item icon={<Icon icon="sign-out" style={{ color: "#78BE20" }} />} style={{ paddingRight: "10px" }}>
                 Log Out
               </Nav.Item>
             </Link>

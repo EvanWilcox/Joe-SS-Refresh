@@ -41,48 +41,51 @@ export class CourseSchedule extends Component {
           location: "Arranged",
         },
         {
-          class: "COMP SCI 3200 - 101",
-          code: "LEC 70537",
-          title: "Intro Numerical Methods",
+          class: "COMP SCI 4610 - 101",
+          code: "LEC 69420",
+          title: "Intro to Cyber Security",
           days: "Tues, Thurs",
-          time: "9:30AM - 10:45AM",
-          location: "Computer Science 120",
+          time: "2:00PM - 3:15PM",
+          location: "Arranged",
         },
       ],
     };
   }
 
   render() {
+    const { data } = this.state;
+    const { height } = this.props;
+
     return (
-      <div>
+      <Panel shaded bordered className="panel">
         <div>
+          <div style={{ width: "70%", float: "left" }}>
+            <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
+            <h3>Course Schedule</h3>
+            <p className="no-padding">Fall 2020</p>
+          </div>
           <div>
-            <div style={{ width: "70%", float: "left" }}>
-              <Icon style={{ float: "left", paddingRight: "15px" }} icon="calendar" size="4x" />
-              <h3>Course Schedule</h3>
-              <p className="no-padding">Fall 2020</p>
-            </div>
-            <div>
-              <Button
-                appearance="primary"
-                style={{ display: "block", width: "20%", marginBottom: "5px", maxWidth: "120px" }}
-              >
-                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
-                Add to gCal
-              </Button>
-              <Button
-                appearance="primary"
-                style={{ display: "block", width: "20%", maxWidth: "120px" }}
-              >
-                <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
-                Add to iCal
-              </Button>
-            </div>
+            <Button
+              appearance="primary"
+              style={{ display: "block", width: "20%", minWidth: "120px", marginBottom: "5px", maxWidth: "120px" }}
+              href="#"
+            >
+              <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+              Add to gCal
+            </Button>
+            <Button
+              appearance="primary"
+              style={{ display: "block", width: "20%", minWidth: "120px", maxWidth: "120px" }}
+              href="#"
+            >
+              <Icon icon="plus" style={{ color: "#78BE20", paddingRight: "5px" }} />
+              Add to iCal
+            </Button>
           </div>
         </div>
 
-        <div style={{ height: "438px", width: "100%", overflow: "auto" }}>
-          {this.state.data.map((item, key) => (
+        <div style={{ height: height, width: "100%", overflow: "auto" }}>
+          {data.map((item, key) => (
             <Panel key={key} bordered className="class">
               <div style={{ width: "100%" }}>
                 <div style={{ width: "50%", float: "left" }}>
@@ -99,7 +102,7 @@ export class CourseSchedule extends Component {
             </Panel>
           ))}
         </div>
-      </div>
+      </Panel>
     );
   }
 }
