@@ -44,17 +44,19 @@ class SideNav extends Component {
           <Sidenav.Body>
             <Nav>
               {/* Picture/Student Name/School */}
-              <Nav.Item style={{ paddingTop: "10px", textAlign: "left" }}>
-                <img
-                  src={placeHolderImage}
-                  alt="Headshot"
-                  width="140"
-                  height="140"
-                  style={{ borderRadius: "50%", border: "5px solid #78BE20" }}
-                />
-                <p style={{ fontSize: "26px", paddingTop: "10px" }}>Christopher Gu</p>
-                <p>Student | Missouri S&T</p>
-              </Nav.Item>
+              <Link to="/" style={{ textDecoration: "none" }}>
+                <Nav.Item style={{ paddingTop: "10px", textAlign: "left" }}>
+                  <img
+                    src={placeHolderImage}
+                    alt="Headshot"
+                    width="140"
+                    height="140"
+                    style={{ borderRadius: "50%", border: "5px solid #78BE20" }}
+                  />
+                  <p style={{ fontSize: "26px", paddingTop: "10px" }}>Christopher Gu</p>
+                  <p>Student | Missouri S&T</p>
+                </Nav.Item>
+              </Link>
 
               {/* Dashboard Button */}
               <Link to="/" style={{ textDecoration: "none" }}>

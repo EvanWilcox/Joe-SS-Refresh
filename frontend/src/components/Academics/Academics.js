@@ -41,7 +41,7 @@ export class Academics extends Component {
 
             <Nav.Item>
               <NavLink
-                to="/academics/transfercourses"
+                to="/academics/transfercredit"
                 className="nav-text"
                 activeClassName="active-link"
                 style={{ textDecoration: "none" }}
@@ -67,7 +67,7 @@ export class Academics extends Component {
           </Route>
 
           <Route path="/academics/coursehistory" component={CourseHistory} />
-          <Route path="/academics/transfercourses">
+          <Route path="/academics/transfercredit">
             <CourseCredits />
             <TestCredits />
           </Route>
