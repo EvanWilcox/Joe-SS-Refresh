@@ -76,7 +76,7 @@ export class CourseCredits extends Component {
       <Panel shaded bordered className="panel">
         <h4>Course Credits</h4>
         {data.map((item, key) => (
-          <Panel key={key} bordered style={{ marginTop: "10px" }}>
+          <Panel key={key} bordered style={{ marginTop: "20px" }}>
             <div style={{ display: "inline", width: "100%" }}>
               <div style={{ float: "left", width: "10%" }}>
                 <strong>Model Nbr, Status</strong>
@@ -107,7 +107,7 @@ export class CourseCredits extends Component {
                 <br />
                 <strong>Plan</strong>
               </div>
-              <div style={{ float: "left", width: "30%", marginBottom: "20px" }}>
+              <div style={{ float: "left", width: "30%", marginBottom: "25px" }}>
                 {item.program}
                 <br />
                 {item.plan}

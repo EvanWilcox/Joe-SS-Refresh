@@ -33,8 +33,8 @@ function Header() {
             </Nav.Item>
 
             {/* Search Bar */}
-            <div style={{ float: "right", padding: "10px", width: "calc(100vw - 370px)" }}>
-              <InputGroup style={{ width: "100%", border: "2px solid #003B49" }}>
+            <div style={{ float: "right", padding: "10px", width: "calc(100vw - 420px)" }}>
+              <InputGroup style={{ width: "100%", border: "2px solid #003B49", marginLeft: "60px" }}>
                 <Input
                   placeholder="Search"
                   style={{

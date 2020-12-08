@@ -68,8 +68,10 @@ export class Academics extends Component {
 
           <Route path="/academics/coursehistory" component={CourseHistory} />
           <Route path="/academics/transfercredit">
-            <CourseCredits />
-            <TestCredits />
+            <div style={{ maxHeight: 780, width: "100%", overflow: "auto" }}>
+              <CourseCredits />
+              <TestCredits />
+            </div>
           </Route>
         </Switch>
       </div>
