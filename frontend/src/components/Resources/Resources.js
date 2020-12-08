@@ -58,8 +58,8 @@ class Resources extends Component {
           <Panel shaded bordered className="panel" style={{ width: "350px", paddingRight: "10px" }}>
             <h3 style={{ margin: "0px 5%" }}>Help and Safety</h3>
             <ResourceButton label="Campus Police" link="https://police.mst.edu/" />
-            <ResourceButton label="Health and Wellbeing" link="" />
-            <ResourceButton label="IT Help Desk" link="https://wellbeing.mst.edu/" />
+            <ResourceButton label="Health and Wellbeing" link="https://wellbeing.mst.edu/" />
+            <ResourceButton label="IT Help Desk" link="https://it.mst.edu/help-desk/" />
             <ResourceButton label="S&T Alert" link="https://mstalert.com/" />
           </Panel>
 

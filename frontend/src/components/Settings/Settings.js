@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Panel, Checkbox, Radio, RadioGroup } from "rsuite";
+import { Panel, Checkbox, Radio, RadioGroup, Icon } from "rsuite";
 
 function NotificationItem(props) {
   return (
@@ -14,7 +14,9 @@ class Settings extends Component {
     super();
 
     this.state = {
-      radioList: "light",
+      radioListAppearance: "light",
+      radioListOther1: "on",
+      radioListOther2: "off",
       emailNotifications: [
         { label: "New Announcements", state: true },
         { label: "Incomplete Action Items", state: false },
@@ -59,7 +61,7 @@ class Settings extends Component {
     const { emailNotifications, subscribeNotifications, callNotifications } = this.state;
 
     return (
-      <div>
+      <div style={{ maxHeight: 850, width: "100%", overflow: "auto" }}>
         <Panel bordered shaded className="panel" style={{ padding: " 0px 10px 30px 10px" }}>
           <h4 style={{ paddingBottom: "10px" }}>Notifications</h4>
           <Panel
@@ -101,16 +103,68 @@ class Settings extends Component {
             <RadioGroup
               inline
               name="radioList"
-              value={this.state.radioList}
+              value={this.state.radioListAppearance}
               onChange={(value) => {
-                this.handleChange("radioList", value);
+                this.handleChange("radioListAppearance", value);
               }}
             >
               <Radio value="light">Light Theme</Radio>
               <Radio value="dark">Dark Theme</Radio>
             </RadioGroup>
           </Panel>
+          <Panel
+            bordered
+            style={{ width: "calc((100% - 60px) / 3)", minWidth: "300px", float: "left", margin: " 0px 15px" }}
+          >
+            <h6>Other Setting</h6>
+            <RadioGroup
+              inline
+              name="radioListOther1"
+              value={this.state.radioListOther1}
+              onChange={(value) => {
+                this.handleChange("radioListOther1", value);
+              }}
+            >
+              <Radio value="on">On</Radio>
+              <Radio value="off">Off</Radio>
+            </RadioGroup>
+          </Panel>
+          <Panel
+            bordered
+            style={{ width: "calc((100% - 60px) / 3)", minWidth: "300px", float: "left", marginLeft: "15px" }}
+          >
+            <h6>Other Setting</h6>
+            <RadioGroup
+              inline
+              name="radioListOther2"
+              value={this.state.radioListOther2}
+              onChange={(value) => {
+                this.handleChange("radioListOther2", value);
+              }}
+            >
+              <Radio value="on">On</Radio>
+              <Radio value="off">Off</Radio>
+            </RadioGroup>
+          </Panel>
         </Panel>
+
+        <div style={{ display: "inline", width: "100%" }}>
+          <div style={{ float: "left", width: "50%" }}>
+            <Panel shaded bordered className="panel" style={{ marginTop: "0px" }}>
+              <h4>Credits</h4>
+              <br />
+              <p>Zach Dautenhahn, Christopher Gu, Samuel Huff, Devinda Senanayaka, Evan Wilcox</p>
+              <br />
+              <a href="https://github.com/EvanWilcox/Joe-SS-Refresh" target="_blank" rel="noopener noreferrer">
+                <Icon icon="github" size="lg" style={{ marginRight: "5px" }} />
+                <strong> GitHub</strong>
+              </a>
+            </Panel>
+          </div>
+          <div style={{ float: "left", width: "50%" }}>
+            <Panel shaded bordered className="panel " style={{ marginTop: "0px", height: "155px" }}></Panel>
+          </div>
+        </div>
       </div>
     );
   }

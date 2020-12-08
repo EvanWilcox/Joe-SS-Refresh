@@ -22,7 +22,7 @@ class App extends Component {
             </div>
 
             {/* Main Content */}
-            <div style={{ flexGrow: "1", backgroundColor: "#f0f0f0", padding: "15px" }}>
+            <div style={{ flexGrow: "1", backgroundColor: "#E5E5E5", padding: "15px" }}>
               <Switch>
                 <Route path="/personal" component={Personal} />
                 <Route path="/academics" component={Academics} />
