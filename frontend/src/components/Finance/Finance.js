@@ -2,7 +2,22 @@ import React, { Component } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import { Nav, Panel, Button, Icon } from "rsuite";
 
-export class Finance extends Component {
+function ActionButton(props) {
+  return (
+    <Button
+      appearance="primary"
+      className="resource-btn"
+      style={{ width: "80%", margin: "5px 10%", textAlign: "left" }}
+      href={props.link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {props.label}
+    </Button>
+  );
+}
+
+class Finance extends Component {
   constructor() {
     super();
     this.state = {
@@ -268,18 +283,13 @@ export class Finance extends Component {
                     <h4>Actions</h4>
                     <p className="no-padding">External Links</p>
                   </div>
-                  <Button appearance="primary" style={{ width: "80%", margin: "5px 5%", textAlign: "left" }} href="#">
-                    Financial Aid
-                  </Button>
-                  <Button appearance="primary" style={{ width: "80%", margin: "5px 5%", textAlign: "left" }} href="#">
-                    Scholarships
-                  </Button>
-                  <Button appearance="primary" style={{ width: "80%", margin: "5px 5%", textAlign: "left" }} href="#">
-                    Start the FAFSA
-                  </Button>
-                  <Button appearance="primary" style={{ width: "80%", margin: "5px 5%", textAlign: "left" }} href="#">
-                    Miner Money Management
-                  </Button>
+                  <ActionButton label="Financial Aid" link="https://sfa.mst.edu/" />
+                  <ActionButton label="Scholarships" link="https://sfa.mst.edu/financial-aid/scholarships/" />
+                  <ActionButton label="Start the FAFSA" link="https://studentaid.gov/h/apply-for-aid/fafsa" />
+                  <ActionButton
+                    label="Miner Money Management"
+                    link="https://sfa.mst.edu/resources/miner-money-management/"
+                  />
                 </Panel>
               </div>
             </div>
@@ -290,7 +300,7 @@ export class Finance extends Component {
                 <div>
                   <Panel
                     header={<h4>{item.term}</h4>}
-                    style={{ backgroundColor: "white", paddingLeft: "10px", margin: "15px" }}
+                    style={{ backgroundColor: "white", paddingLeft: "10px", margin: "10px" }}
                     key={key}
                     collapsible
                     shaded
