@@ -1,13 +1,24 @@
 # Joe'SS Refresh
 
-Joe'SS Refresh is a visual update to Missouri S&T's Joe'SS software.
+## About the Project
 
-To setup this project you will need nodejs v12.19.0 or greater.
-Run the following commands: 
+Joe'SS Refresh is an attempt to refresh the visual design of Missouri S&T's Joe'SS software that students use to access their class schedule, academic information, resources, etc. This project was built for the 2020 Fall Semester of CS4096 at Missouri S&T.
 
-    git clone https://github.com/EvanWilcox/Joe-SS-Refresh.git
-    cd Joe-SS-Refresh/frontend
-    npm install
-    npm start
+### Built With
 
-Navigate to localhost:3000
+- [React](https://reactjs.org/)
+- [Rsuite](https://rsuitejs.com/)
+- [GraphQL](https://graphql.org/)
+- [Prisma](https://www.prisma.io/)
+
+## Installation
+
+To get a local copy up and running follow the README's in each subdirectory `frontend` and `backend`.
+
+## Contributors
+
+Zach Dautenhahn, Christopher Gu, Samuel Huff, Devinda Senanayaka, Evan Wilcox
+
+## License
+
+Distributed under the MIT License. See LICENSE.md for more information.
