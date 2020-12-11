@@ -1,0 +1,128 @@
+type Student {
+    id: ID
+
+    profilePicURL: String
+
+    creditsCompleted: Int
+
+    studentID: Int
+    gender: String
+    dob: String
+    birthCountry: String
+    birthState: String
+    maritialStatus: String
+    militaryStatus: String
+    citizenshipStatus: String
+    citizenshipCountry: String
+    visaType: String
+    visaPermit: String
+    visaCountry: String
+
+    names: [Name]
+    addresses: [Address]
+    phonenumbers: [PhoneNumber]
+    emails: [EmailAddress]
+    contacts: [Contact]
+
+    finance: Finance
+
+    actionItems: [ActionItem]
+
+    classes: [Class]
+    advisor: Teacher
+    transcript: [TranscriptRecord]
+}
+
+type Name {
+    name: String
+    type: String
+}
+type Address {
+    type: String
+    address: String
+}
+
+type PhoneNumber {
+    type: String
+    number: String
+    ext: String
+    country: Int
+    preferred: Boolean
+}
+
+type EmailAddress {
+    type: String
+    address: String
+    preferred: Boolean
+}
+
+type Contact {
+    primary: Boolean
+    name: String
+    relationship: String
+    number: String
+    ext: Int
+    country: String
+}
+
+
+type Finance {
+    accountBalance: Float
+}
+
+type Class {
+    id: ID
+    name: String
+    code: String
+    title: String
+    days: String
+    time: String
+    location: String
+}
+
+type TranscriptRecord {
+    class: Class
+    semester: String
+    year: String
+    grade: String
+}
+
+type Teacher {
+    id: ID!
+    name: String
+}
+
+type Message {
+    department: String
+    description: String
+    StrSent: String
+    body: String
+}
+
+type Query {
+    info: String!
+    student(id: ID!): Student!
+    class(id: ID!): Class!
+    classes: [Class]!
+    teacher(id: ID): Teacher
+    announcements: [Announcement]
+}
+
+type Announcement {
+    title: String
+    detail: String
+    imageUrl: String
+}
+
+type ActionItem {
+    title: String
+    detail: String
+    completed: Boolean
+}
+
+type Mutation {
+    createStudent(email: String!, name: String, advisorId: ID!): Student
+    updateStudent(id: ID!, name: String, email: String, advisorId: ID): Student
+    addClassToStudent(studentID: ID!, classID: ID!): Student
+    removeClassToStudent(studentID: ID!, classID: ID!): Student
+}

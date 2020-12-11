@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Student",
+      "field": "phonenumbers",
+      "type": "PhoneNumber",
+      "arity": "List"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Student",
+      "field": "phonenumber"
+    }
+  ]
+}

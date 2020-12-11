@@ -1,0 +1,108 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Student {
+  id                      Int     @id @default(autoincrement())  
+  studentID               Int
+  profilePicURL           String
+  creditsCompleted        Int
+  gender                  String
+  dob                     String
+  birthCountry            String
+  birthState              String
+  maritialStatus          String
+  militaryStatus          String
+  citizenshipStatus       String
+  citizenshipCountry      String
+  visaType                String
+  visaPermit              String
+  visaCountry             String
+  names                   Name[]
+  addresses               Address[]
+  phonenumbers            PhoneNumber[]
+  emails                  EmailAddress[]
+  contacts                Contact[]
+  finance                 Finance? @relation(fields: [financeId], references: [id])
+  financeId               Int? 
+  actionItems             ActionItem[]
+  advisor   Teacher? @relation(fields: [advisorId], references: [id])
+  advisorId Int?
+  classes   Class[] @relation("RegistrationRecord")
+}
+
+model Name{
+  id  Int @id @default(autoincrement())
+  name  String
+  type  String
+}
+model Address{
+  id      Int @id @default(autoincrement())
+  type      String
+  address String
+}
+model PhoneNumber{
+  id        Int @id @default(autoincrement())
+  type      String
+  number    String
+  ext       String
+  country   Int
+  preferred Boolean
+}
+model EmailAddress{
+  id        Int @id @default(autoincrement())
+  type      String
+  address   String
+  preferred Boolean
+}
+model Finance {
+    id              Int @id @default(autoincrement())
+    accountBalance  Float
+}
+model Announcement {
+    id        Int @id @default(autoincrement())
+    title     String
+    detail    String
+    imageUrl  String
+}
+
+model ActionItem {
+    id        Int @id @default(autoincrement())
+    title     String
+    detail    String
+    completed Boolean
+}
+
+model Contact{
+    id              Int @id @default(autoincrement())
+    primary         Boolean
+    name            String
+    relationship    String
+    number          String
+    ext             Int
+    country         String
+}
+
+model Class {
+  id        Int       @id @default(autoincrement())
+  name      String
+  code      String
+  title     String
+  days      String
+  time      String
+  location  String
+  students  Student[] @relation("RegistrationRecord")
+}
+
+model Teacher {
+  id      Int       @id @default(autoincrement())
+  email   String
+  name    String
+  Class   Class[]
+  Student Student[]
+}

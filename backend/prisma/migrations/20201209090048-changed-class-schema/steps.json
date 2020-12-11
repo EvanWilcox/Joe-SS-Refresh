@@ -1,0 +1,81 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateField",
+      "model": "Class",
+      "field": "name",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Class",
+      "field": "code",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Class",
+      "field": "days",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Class",
+      "field": "time",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Class",
+      "field": "location",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "detail"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "startDate"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "endDate"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "startTime"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "endTime"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "teacherId"
+    },
+    {
+      "tag": "DeleteField",
+      "model": "Class",
+      "field": "teacher"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Class",
+      "field": "title",
+      "arity": "Required"
+    }
+  ]
+}

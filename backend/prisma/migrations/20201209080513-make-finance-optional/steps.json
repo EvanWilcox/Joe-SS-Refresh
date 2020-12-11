@@ -1,0 +1,17 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "UpdateField",
+      "model": "Student",
+      "field": "finance",
+      "arity": "Optional"
+    },
+    {
+      "tag": "UpdateField",
+      "model": "Student",
+      "field": "financeId",
+      "arity": "Optional"
+    }
+  ]
+}
